@@ -33,7 +33,9 @@ jobs:
           category: integration
   home-assistant:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
+      fail-fast: false
       matrix:
         include:
           - python: '3.13'

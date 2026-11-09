@@ -9,11 +9,12 @@ from unittest.mock import patch
 from homeassistant.bootstrap import async_from_config_dict
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import entity_registry as er
-from homeassistant.loader import async_get_integration
+from homeassistant.loader import async_get_integration, async_setup as setup_loader
 
 
 async def smoke(config_dir):
     hass = HomeAssistant(str(config_dir))
+    setup_loader(hass)
     await async_from_config_dict({
         'homeassistant': {'name': 'Synthetic test', 'latitude': 0, 'longitude': 0,
                          'elevation': 0, 'unit_system': 'metric', 'time_zone': 'UTC'},
