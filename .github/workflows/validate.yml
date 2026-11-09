@@ -48,4 +48,9 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python -m pip install homeassistant==${{ matrix.ha }}
+      # HA 2025.10 pins aiodns 3.5, whose old metadata permits incompatible
+      # pycares 5.x. Keep this historical test environment on the 4.x API.
+      # https://github.com/aio-libs/aiodns/issues/214
+      - if: matrix.ha == '2025.10.1'
+        run: python -m pip install pycares==4.11.0
       - run: python tests/ha_smoke.py
