@@ -45,6 +45,12 @@ Správcovské API kontroluje oprávnění i na serveru. Běžné entity a akce p
 
 Úpravy LAN mohou přerušit spojení. Obnovení webového připojení nemění adresu Modbusu ani router. Změny sítě, účtu, SMTP a všech podmíněných funkcí nebyly kompletně vyzkoušeny na zařízení. Fyzický výpadek napájení a Wi-Fi nebyl testován. Samostatná webová integrace obsluhuje právě ověřené webové rozhraní; Modbus příklady mají vlastní rozsah a předpoklady.
 
+## Automatické ověření bety
+
+Testy s reálnou instalací HA a **simulovaným regulátorem** prošly na **HA 2025.10.1 / Python 3.13** a **HA 2026.11.1 / Python 3.14**. Ověřují přidání integrace, odmítnutí duplicit, vytvoření všech 29 entit, údaje pro směrování karet, zachování ID entit při znovunačtení a uvolnění integrace. Pro starší HA testovací prostředí omezuje `pycares` na verzi `4.11.0` kvůli jeho staré knihovně `aiodns`; nejde o požadavek integrace.
+
+Tyto kontroly nepotvrzují kompatibilitu s dalším fyzickým modelem čerpadla. Veřejná varianta zatím nebyla nasazena na skutečný regulátor.
+
 ## Další modely a hlášení chyb
 
 Do GitHub issue napište model, verzi regulátoru, verzi HA, kód parametru a očištěnou chybu. Nepřikládejte přístupové údaje, celé stránky regulátoru, soubory `.storage`, zálohy nebo identifikátory domácnosti. Údaje pro další firmware nejprve ověřujeme při čtení; neznámé symboly a rozsahy se nedoplňují odhadem.

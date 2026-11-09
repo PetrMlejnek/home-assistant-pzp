@@ -67,6 +67,8 @@ node --test tests/cards.test.mjs
 python scripts/validate_package.py
 ```
 
-CI also runs hassfest and a disposable real HA instance with a **simulated** controller. Unit and simulated integration tests do not prove new hardware compatibility. Report the model, controller firmware, HA version, relevant parameter code and a sanitized error. Do not post passwords, cookies, full config entries, raw controller pages or household exports. See [CONTRIBUTING.md](CONTRIBUTING.md).
+CI also runs hassfest, HACS validation and disposable real HA instances with a **simulated** controller. The beta passed on **HA 2025.10.1 / Python 3.13** and **HA 2026.11.1 / Python 3.14**: setup, duplicate detection, creation of all 29 entities, card routing metadata, stable entity IDs across reload, and unload. The historical HA test environment pins `pycares==4.11.0` for its older `aiodns`; this is a CI dependency constraint, not an integration requirement.
+
+Unit and simulated integration tests do not prove new hardware compatibility. Report the model, controller firmware, HA version, relevant parameter code and a sanitized error. Do not post passwords, cookies, full config entries, raw controller pages or household exports. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 MIT licensed. PZP and Teco names identify compatible equipment; their firmware and protocol documents are not distributed here.
