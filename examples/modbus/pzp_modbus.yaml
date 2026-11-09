@@ -1,0 +1,344 @@
+- name: pzp_hp
+  type: tcp
+  host: !secret pzp_host
+  port: 502
+  timeout: 10
+  delay: 0
+  message_wait_milliseconds: 1000
+  sensors:
+  - name: PZP verze protokolu raw
+    unique_id: pzp_protocol_raw
+    slave: 1
+    address: 0
+    input_type: holding
+    data_type: uint16
+    scan_interval: 300
+  - name: PZP vstupni voda
+    unique_id: pzp_inlet_temperature
+    slave: 1
+    address: 100
+    input_type: holding
+    data_type: int16
+    scan_interval: 60
+    scale: 0.1
+    precision: 1
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP vystupni voda
+    unique_id: pzp_outlet_temperature
+    slave: 1
+    address: 101
+    input_type: holding
+    data_type: int16
+    scan_interval: 60
+    scale: 0.1
+    precision: 1
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP teplota TUV
+    unique_id: pzp_dhw_temperature
+    slave: 1
+    address: 105
+    input_type: holding
+    data_type: int16
+    scan_interval: 60
+    scale: 0.1
+    precision: 1
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP stav raw
+    unique_id: pzp_state_raw
+    slave: 1
+    address: 5003
+    input_type: holding
+    data_type: uint16
+    scan_interval: 60
+  - name: PZP pokojova teplota
+    unique_id: pzp_room_temperature_01
+    slave: 1
+    address: 109
+    input_type: holding
+    data_type: int16
+    scale: 0.1
+    precision: 1
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+    scan_interval: 60
+  - name: PZP identifikace raw
+    unique_id: pzp_identifikace_raw
+    slave: 1
+    address: 0
+    input_type: holding
+    data_type: custom
+    scan_interval: 300
+    count: 12
+    structure: '>12H'
+    precision: 0
+  - name: PZP teploty raw
+    unique_id: pzp_teploty_raw
+    slave: 1
+    address: 100
+    input_type: holding
+    data_type: custom
+    scan_interval: 120
+    count: 19
+    structure: '>19h'
+    precision: 0
+  - name: PZP regulace raw
+    unique_id: pzp_regulace_raw
+    slave: 1
+    address: 130
+    input_type: holding
+    data_type: custom
+    scan_interval: 120
+    count: 23
+    structure: '>23h'
+    precision: 0
+  - name: PZP krivky raw
+    unique_id: pzp_krivky_raw
+    slave: 1
+    address: 5000
+    input_type: holding
+    data_type: custom
+    scan_interval: 300
+    count: 3
+    structure: '>3h'
+    precision: 0
+  - name: PZP hodiny raw
+    unique_id: pzp_hodiny_raw
+    slave: 1
+    address: 7
+    input_type: holding
+    data_type: uint16
+    scan_interval: 60
+  binary_sensors:
+  - name: PZP pohotovostni rezim
+    unique_id: pzp_standby_read
+    slave: 1
+    address: 2023
+    input_type: coil
+    scan_interval: 60
+  - name: PZP bit 1
+    unique_id: pzp_block_coil_1
+    slave: 1
+    address: 1
+    input_type: coil
+    scan_interval: 300
+    slave_count: 20
+  - name: PZP bit 30
+    unique_id: pzp_block_coil_30
+    slave: 1
+    address: 30
+    input_type: coil
+    scan_interval: 120
+    slave_count: 17
+  - name: PZP bit 60
+    unique_id: pzp_block_coil_60
+    slave: 1
+    address: 60
+    input_type: coil
+    scan_interval: 120
+    slave_count: 12
+  - name: PZP bit 80
+    unique_id: pzp_block_coil_80
+    slave: 1
+    address: 80
+    input_type: coil
+    scan_interval: 300
+    slave_count: 4
+  - name: PZP bit 90
+    unique_id: pzp_block_coil_90
+    slave: 1
+    address: 90
+    input_type: coil
+    scan_interval: 300
+    slave_count: 5
+  - name: PZP bit 100
+    unique_id: pzp_block_coil_100
+    slave: 1
+    address: 100
+    input_type: coil
+    scan_interval: 120
+    slave_count: 7
+  - name: PZP bit 160
+    unique_id: pzp_block_coil_160
+    slave: 1
+    address: 160
+    input_type: coil
+    scan_interval: 300
+    slave_count: 20
+  - name: PZP bit 200
+    unique_id: pzp_block_coil_200
+    slave: 1
+    address: 200
+    input_type: coil
+    scan_interval: 120
+    slave_count: 31
+  - name: PZP bit 233
+    unique_id: pzp_block_coil_233
+    slave: 1
+    address: 233
+    input_type: coil
+    scan_interval: 120
+    slave_count: 5
+  - name: PZP bit 300
+    unique_id: pzp_block_coil_300
+    slave: 1
+    address: 300
+    input_type: coil
+    scan_interval: 60
+    slave_count: 22
+  - name: PZP bit 350
+    unique_id: pzp_block_coil_350
+    slave: 1
+    address: 350
+    input_type: coil
+    scan_interval: 60
+    slave_count: 5
+  - name: PZP bit 400
+    unique_id: pzp_block_coil_400
+    slave: 1
+    address: 400
+    input_type: coil
+    scan_interval: 120
+    slave_count: 5
+  - name: PZP bit 450
+    unique_id: pzp_block_coil_450
+    slave: 1
+    address: 450
+    input_type: coil
+    scan_interval: 300
+  - name: PZP bit 500
+    unique_id: pzp_block_coil_500
+    slave: 1
+    address: 500
+    input_type: coil
+    scan_interval: 120
+  - name: PZP bit 550
+    unique_id: pzp_block_coil_550
+    slave: 1
+    address: 550
+    input_type: coil
+    scan_interval: 120
+    slave_count: 2
+  - name: PZP bit 560
+    unique_id: pzp_block_coil_560
+    slave: 1
+    address: 560
+    input_type: coil
+    scan_interval: 300
+    slave_count: 2
+  - name: PZP bit 600
+    unique_id: pzp_block_coil_600
+    slave: 1
+    address: 600
+    input_type: coil
+    scan_interval: 120
+    slave_count: 6
+  - name: PZP bit 630
+    unique_id: pzp_block_coil_630
+    slave: 1
+    address: 630
+    input_type: coil
+    scan_interval: 120
+    slave_count: 4
+  - name: PZP bit 650
+    unique_id: pzp_block_coil_650
+    slave: 1
+    address: 650
+    input_type: coil
+    scan_interval: 120
+    slave_count: 15
+  - name: PZP bit 700
+    unique_id: pzp_block_coil_700
+    slave: 1
+    address: 700
+    input_type: coil
+    scan_interval: 120
+    slave_count: 5
+  - name: PZP bit 750
+    unique_id: pzp_block_coil_750
+    slave: 1
+    address: 750
+    input_type: coil
+    scan_interval: 120
+    slave_count: 2
+  - name: PZP bit 760
+    unique_id: pzp_block_coil_760
+    slave: 1
+    address: 760
+    input_type: coil
+    scan_interval: 300
+    slave_count: 2
+  - name: PZP bit 770
+    unique_id: pzp_block_coil_770
+    slave: 1
+    address: 770
+    input_type: coil
+    scan_interval: 300
+    slave_count: 2
+  - name: PZP bit 780
+    unique_id: pzp_block_coil_780
+    slave: 1
+    address: 780
+    input_type: coil
+    scan_interval: 300
+    slave_count: 2
+  - name: PZP bit 800
+    unique_id: pzp_block_coil_800
+    slave: 1
+    address: 800
+    input_type: coil
+    scan_interval: 300
+    slave_count: 2
+  - name: PZP bit 850
+    unique_id: pzp_block_coil_850
+    slave: 1
+    address: 850
+    input_type: coil
+    scan_interval: 300
+    slave_count: 2
+  - name: PZP bit 1000
+    unique_id: pzp_block_coil_1000
+    slave: 1
+    address: 1000
+    input_type: coil
+    scan_interval: 120
+    slave_count: 7
+  - name: PZP bit 2000
+    unique_id: pzp_block_coil_2000
+    slave: 1
+    address: 2000
+    input_type: coil
+    scan_interval: 120
+    slave_count: 23
+  - name: PZP bit 2029
+    unique_id: pzp_block_coil_2029
+    slave: 1
+    address: 2029
+    input_type: coil
+    scan_interval: 120
+    slave_count: 3
+  - name: PZP bit 50000
+    unique_id: pzp_block_coil_50000
+    slave: 1
+    address: 50000
+    input_type: coil
+    scan_interval: 300
+  switches:
+  - name: PZP pohotovost
+    unique_id: pzp_standby_control
+    slave: 1
+    address: 2023
+    write_type: coil
+    command_on: 1
+    command_off: 0
+    verify:
+      address: 2023
+      input_type: coil
+      delay: 0
+    scan_interval: 120

@@ -1,0 +1,32 @@
+{
+  "title": "PZP Heat Pump",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect a PZP heat pump",
+        "description": "Use the account from the local controller web interface. Credentials stay in Home Assistant. Connecting does not change controller settings. Verified with controller software 05.03.00.",
+        "data": {
+          "host": "Local IPv4 address or hostname (optional :port)",
+          "username": "Username",
+          "password": "Password"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reconnect to PZP",
+        "data": {
+          "username": "Username",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The controller rejected these credentials.",
+      "cannot_connect": "Could not connect to the controller.",
+      "unsupported_firmware": "The controller interface does not match the verified layout. No setting was changed."
+    },
+    "abort": {
+      "already_configured": "This controller is already configured.",
+      "reauth_successful": "Authentication was updated."
+    }
+  }
+}

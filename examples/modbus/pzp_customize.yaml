@@ -1,0 +1,1091 @@
+binary_sensor.pzp_bit_1:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI0
+  modbus_address: 1
+  modbus_type: coil
+binary_sensor.pzp_bit_1_1:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI1
+  modbus_address: 2
+  modbus_type: coil
+binary_sensor.pzp_bit_1_2:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI2
+  modbus_address: 3
+  modbus_type: coil
+binary_sensor.pzp_bit_1_3:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI3
+  modbus_address: 4
+  modbus_type: coil
+binary_sensor.pzp_bit_1_4:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI4
+  modbus_address: 5
+  modbus_type: coil
+binary_sensor.pzp_bit_1_5:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI5, 230V
+  modbus_address: 6
+  modbus_type: coil
+binary_sensor.pzp_bit_1_6:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI6
+  modbus_address: 7
+  modbus_type: coil
+binary_sensor.pzp_bit_1_7:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI7
+  modbus_address: 8
+  modbus_type: coil
+binary_sensor.pzp_bit_1_8:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI8
+  modbus_address: 9
+  modbus_type: coil
+binary_sensor.pzp_bit_1_9:
+  friendly_name: PZP Stav digitálního vstupu PLC - CP1051_DI9
+  modbus_address: 10
+  modbus_type: coil
+binary_sensor.pzp_bit_1_10:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO0
+  modbus_address: 11
+  modbus_type: coil
+binary_sensor.pzp_bit_1_11:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO1
+  modbus_address: 12
+  modbus_type: coil
+binary_sensor.pzp_bit_1_12:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO2
+  modbus_address: 13
+  modbus_type: coil
+binary_sensor.pzp_bit_1_13:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO3
+  modbus_address: 14
+  modbus_type: coil
+binary_sensor.pzp_bit_1_14:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO4
+  modbus_address: 15
+  modbus_type: coil
+binary_sensor.pzp_bit_1_15:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO5
+  modbus_address: 16
+  modbus_type: coil
+binary_sensor.pzp_bit_1_16:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO6
+  modbus_address: 17
+  modbus_type: coil
+binary_sensor.pzp_bit_1_17:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO7
+  modbus_address: 18
+  modbus_type: coil
+binary_sensor.pzp_bit_1_18:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO8
+  modbus_address: 19
+  modbus_type: coil
+binary_sensor.pzp_bit_1_19:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO9
+  modbus_address: 20
+  modbus_type: coil
+binary_sensor.pzp_bit_1_20:
+  friendly_name: PZP Stav releového výstupu PLC - CP1051_DO10
+  modbus_address: 21
+  modbus_type: coil
+binary_sensor.pzp_bit_30:
+  friendly_name: PZP Digitální vstup pro požadavek na provoz pro topný okruh 01
+  modbus_address: 30
+  modbus_type: coil
+binary_sensor.pzp_bit_30_1:
+  friendly_name: PZP Digitální vstup pro požadavek na provoz pro topný okruh 02
+  modbus_address: 31
+  modbus_type: coil
+binary_sensor.pzp_bit_30_2:
+  friendly_name: PZP Digitální vstup - Univerzální vstup
+  modbus_address: 32
+  modbus_type: coil
+binary_sensor.pzp_bit_30_3:
+  friendly_name: PZP Digitální vstup 230V pro HDO, Smart Grid no.1
+  modbus_address: 33
+  modbus_type: coil
+binary_sensor.pzp_bit_30_4:
+  friendly_name: PZP Digitální vstup pro poruchu "Sled fází"
+  modbus_address: 34
+  modbus_type: coil
+binary_sensor.pzp_bit_30_5:
+  friendly_name: PZP Digitální vstup pro poruchu "Vysoký tlak kompresoru"
+  modbus_address: 35
+  modbus_type: coil
+binary_sensor.pzp_bit_30_6:
+  friendly_name: PZP Digitální vstup pro poruchu "Nízký tlak kompresoru"
+  modbus_address: 36
+  modbus_type: coil
+binary_sensor.pzp_bit_30_7:
+  friendly_name: PZP Digitální vstup pro poruchu "Tepelné přetížení kompresoru"
+  modbus_address: 37
+  modbus_type: coil
+binary_sensor.pzp_bit_30_8:
+  friendly_name: PZP Digitální vstup pro poruchu "Jištění, nebo přetížení ventilátorů"
+  modbus_address: 38
+  modbus_type: coil
+binary_sensor.pzp_bit_30_9:
+  friendly_name: PZP Digitální vstup pro poruchu "Přímotopný dohřev teplé vody"
+  modbus_address: 39
+  modbus_type: coil
+binary_sensor.pzp_bit_30_10:
+  friendly_name: PZP Digitální vstup pro poruchu "Porucha elektrokotle"
+  modbus_address: 40
+  modbus_type: coil
+binary_sensor.pzp_bit_30_11:
+  friendly_name: PZP Digitální vstup pro požadavek na provoz pro topný okruh 03
+  modbus_address: 41
+  modbus_type: coil
+binary_sensor.pzp_bit_30_12:
+  friendly_name: PZP Digitální vstup pro blokování funkce "Příprava teplé vody"
+  modbus_address: 42
+  modbus_type: coil
+binary_sensor.pzp_bit_30_13:
+  friendly_name: PZP Digitální vstup pro blokování provozu tepelného čerpadla
+  modbus_address: 43
+  modbus_type: coil
+binary_sensor.pzp_bit_30_14:
+  friendly_name: 'PZP Digitální vstup pro požadavek na trvalý provoz vytápění '
+  modbus_address: 44
+  modbus_type: coil
+binary_sensor.pzp_bit_30_15:
+  friendly_name: PZP Digitální vstup pro poruchu "Porucha průtoku primárním okruhem"
+  modbus_address: 45
+  modbus_type: coil
+binary_sensor.pzp_bit_30_16:
+  friendly_name: PZP Digitální vstup pro Smart Grid no.2
+  modbus_address: 46
+  modbus_type: coil
+binary_sensor.pzp_bit_30_17:
+  friendly_name: PZP Digitální vstup pro požadavek na ohřev bazénu
+  modbus_address: 47
+  modbus_type: coil
+binary_sensor.pzp_bit_60:
+  friendly_name: PZP Releový výstup pro topný okruh 01 OČ-TO1
+  modbus_address: 60
+  modbus_type: coil
+binary_sensor.pzp_bit_60_1:
+  friendly_name: PZP Releový výstup pro topný okruh 02 OČ-TO2
+  modbus_address: 61
+  modbus_type: coil
+binary_sensor.pzp_bit_60_2:
+  friendly_name: PZP Releový výstup pro oběhové čerpadlo tepelného čerpadla OČs
+  modbus_address: 62
+  modbus_type: coil
+binary_sensor.pzp_bit_60_3:
+  friendly_name: PZP Releový výstup pro ventilátor výparníku 01
+  modbus_address: 63
+  modbus_type: coil
+binary_sensor.pzp_bit_60_4:
+  friendly_name: PZP Releový výstup pro kompresor
+  modbus_address: 64
+  modbus_type: coil
+binary_sensor.pzp_bit_60_5:
+  friendly_name: PZP Releový výstup pro ventil odtávání TV1
+  modbus_address: 65
+  modbus_type: coil
+binary_sensor.pzp_bit_60_6:
+  friendly_name: PZP Releový výstup pro odkapní vanu
+  modbus_address: 66
+  modbus_type: coil
+binary_sensor.pzp_bit_60_7:
+  friendly_name: PZP Releový výstup pro ventil teplé vody
+  modbus_address: 67
+  modbus_type: coil
+binary_sensor.pzp_bit_60_8:
+  friendly_name: PZP Releový výstup pro přímotopný dohřev teplé vody
+  modbus_address: 68
+  modbus_type: coil
+binary_sensor.pzp_bit_60_9:
+  friendly_name: PZP Releový výstup univerzální 01
+  modbus_address: 69
+  modbus_type: coil
+binary_sensor.pzp_bit_60_10:
+  friendly_name: PZP Releový výstup univerzální 02
+  modbus_address: 70
+  modbus_type: coil
+binary_sensor.pzp_bit_60_11:
+  friendly_name: PZP Releový výstup pro oběhové čerpadlo primárního okruhu
+  modbus_address: 71
+  modbus_type: coil
+binary_sensor.pzp_bit_60_12:
+  friendly_name: PZP Releový výstup pro magnetický ventil chlazení - MV1
+  modbus_address: 72
+  modbus_type: coil
+binary_sensor.pzp_bit_80:
+  friendly_name: PZP Univerzální výstup 01 - Těleso 1 elektrokotle
+  modbus_address: 80
+  modbus_type: coil
+binary_sensor.pzp_bit_80_1:
+  friendly_name: PZP Univerzální výstup 01 - Topný okruh 03 OČ-TO3
+  modbus_address: 81
+  modbus_type: coil
+binary_sensor.pzp_bit_80_2:
+  friendly_name: PZP Univerzální výstup 01 - Výstup poruchy
+  modbus_address: 82
+  modbus_type: coil
+binary_sensor.pzp_bit_80_3:
+  friendly_name: PZP Univerzální výstup 01 - podle časového programu
+  modbus_address: 83
+  modbus_type: coil
+binary_sensor.pzp_bit_80_4:
+  friendly_name: PZP Univerzální výstup 01 - podle venkovní teploty
+  modbus_address: 84
+  modbus_type: coil
+binary_sensor.pzp_bit_90:
+  friendly_name: PZP Univerzální výstup 02 - Těleso 2 elektrokotle
+  modbus_address: 90
+  modbus_type: coil
+binary_sensor.pzp_bit_90_1:
+  friendly_name: PZP Univerzální výstup 02 - Externí zdroj tepla
+  modbus_address: 91
+  modbus_type: coil
+binary_sensor.pzp_bit_90_2:
+  friendly_name: PZP Univerzální výstup 02 - Topný okruh 04 OČ-TO4
+  modbus_address: 92
+  modbus_type: coil
+binary_sensor.pzp_bit_90_3:
+  friendly_name: PZP Univerzální výstup 02 - Výstup poruchy
+  modbus_address: 93
+  modbus_type: coil
+binary_sensor.pzp_bit_90_4:
+  friendly_name: PZP Univerzální výstup 02 - podle časového programu
+  modbus_address: 94
+  modbus_type: coil
+binary_sensor.pzp_bit_90_5:
+  friendly_name: PZP Univerzální výstup 02 - podle venkovní teploty
+  modbus_address: 95
+  modbus_type: coil
+binary_sensor.pzp_bit_100:
+  friendly_name: PZP Releový výstup pro servoventil směšování 01 Close
+  modbus_address: 100
+  modbus_type: coil
+binary_sensor.pzp_bit_100_1:
+  friendly_name: PZP Releový výstup pro servoventil směšování 01 Open
+  modbus_address: 101
+  modbus_type: coil
+binary_sensor.pzp_bit_100_2:
+  friendly_name: PZP Releový výstup pro servoventil směšování 02 Close
+  modbus_address: 102
+  modbus_type: coil
+binary_sensor.pzp_bit_100_3:
+  friendly_name: PZP Releový výstup pro servoventil směšování 02 Open
+  modbus_address: 103
+  modbus_type: coil
+binary_sensor.pzp_bit_100_4:
+  friendly_name: PZP Releový výstup pro oběhové čerpadlo bazén
+  modbus_address: 104
+  modbus_type: coil
+binary_sensor.pzp_bit_100_5:
+  friendly_name: PZP Releový výstup pro filtraci bazénu
+  modbus_address: 105
+  modbus_type: coil
+binary_sensor.pzp_bit_100_6:
+  friendly_name: PZP Ventil chlazení
+  modbus_address: 106
+  modbus_type: coil
+binary_sensor.pzp_bit_100_7:
+  friendly_name: PZP Výstup chlazení
+  modbus_address: 107
+  modbus_type: coil
+binary_sensor.pzp_bit_160:
+  friendly_name: PZP Teplota na vstupu tepelného čerpadla
+  modbus_address: 160
+  modbus_type: coil
+binary_sensor.pzp_bit_160_1:
+  friendly_name: PZP Teplota na výstupu tepelného čerpadla
+  modbus_address: 161
+  modbus_type: coil
+binary_sensor.pzp_bit_160_2:
+  friendly_name: PZP Teplota v okolí výparníku
+  modbus_address: 162
+  modbus_type: coil
+binary_sensor.pzp_bit_160_3:
+  friendly_name: PZP Teplota na povrchu výparníku
+  modbus_address: 163
+  modbus_type: coil
+binary_sensor.pzp_bit_160_4:
+  friendly_name: PZP Teplota vratné vody z otopné soustavy
+  modbus_address: 164
+  modbus_type: coil
+binary_sensor.pzp_bit_160_5:
+  friendly_name: PZP Teplota teplé vody pro regulaci
+  modbus_address: 165
+  modbus_type: coil
+binary_sensor.pzp_bit_160_6:
+  friendly_name: PZP Teplota za směšovačem 01
+  modbus_address: 166
+  modbus_type: coil
+binary_sensor.pzp_bit_160_7:
+  friendly_name: PZP Teplota za směšovačem 02
+  modbus_address: 167
+  modbus_type: coil
+binary_sensor.pzp_bit_160_8:
+  friendly_name: PZP Venkovní teplota
+  modbus_address: 168
+  modbus_type: coil
+binary_sensor.pzp_bit_160_9:
+  friendly_name: PZP Teplota - Pokojovy terminal 01
+  modbus_address: 169
+  modbus_type: coil
+binary_sensor.pzp_bit_160_10:
+  friendly_name: PZP Teplota - Pokojovy terminal 02
+  modbus_address: 170
+  modbus_type: coil
+binary_sensor.pzp_bit_160_11:
+  friendly_name: PZP Teplota - Pokojovy terminal 03
+  modbus_address: 171
+  modbus_type: coil
+binary_sensor.pzp_bit_160_12:
+  friendly_name: PZP Teplota - Pokojovy terminal 04
+  modbus_address: 172
+  modbus_type: coil
+binary_sensor.pzp_bit_160_13:
+  friendly_name: PZP Teplota na vstupu do výpraníku
+  modbus_address: 173
+  modbus_type: coil
+binary_sensor.pzp_bit_160_14:
+  friendly_name: PZP Teplota na výstupu z výpraníku
+  modbus_address: 174
+  modbus_type: coil
+binary_sensor.pzp_bit_160_15:
+  friendly_name: PZP Teplota vody v bazénu
+  modbus_address: 175
+  modbus_type: coil
+binary_sensor.pzp_bit_160_16:
+  friendly_name: PZP Teplota vratne vody chlazení
+  modbus_address: 176
+  modbus_type: coil
+binary_sensor.pzp_bit_160_17:
+  friendly_name: PZP Teplota topné vody do otopné soustavy topení
+  modbus_address: 177
+  modbus_type: coil
+binary_sensor.pzp_bit_160_18:
+  friendly_name: PZP Průměrná venkovní teplota pro funkci sezóny
+  modbus_address: 178
+  modbus_type: coil
+binary_sensor.pzp_bit_160_19:
+  friendly_name: PZP Průměrná venkovní teplota pro regulaci tepelného čerpadla
+  modbus_address: 179
+  modbus_type: coil
+binary_sensor.pzp_bit_160_20:
+  friendly_name: PZP Teplota teplé vody (informace)
+  modbus_address: 180
+  modbus_type: coil
+binary_sensor.pzp_bit_200:
+  friendly_name: PZP Porucha teplotní sondy B01
+  modbus_address: 200
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_1:
+  friendly_name: PZP Porucha teplotní sondy B02
+  modbus_address: 201
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_2:
+  friendly_name: PZP Porucha teplotní sondy B03
+  modbus_address: 202
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_3:
+  friendly_name: PZP Porucha teplotní sondy B04
+  modbus_address: 203
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_4:
+  friendly_name: PZP Porucha teplotní sondy B11
+  modbus_address: 204
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_5:
+  friendly_name: PZP Porucha teplotní sondy B12
+  modbus_address: 205
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_6:
+  friendly_name: PZP Porucha teplotní sondy B13
+  modbus_address: 206
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_7:
+  friendly_name: PZP Porucha teplotní sondy B14
+  modbus_address: 207
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_8:
+  friendly_name: PZP Porucha teplotní sondy B17
+  modbus_address: 208
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_9:
+  friendly_name: 'PZP Porucha komunikace CIB modul #1 - Modul pro směšování 01 '
+  modbus_address: 209
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_10:
+  friendly_name: 'PZP Porucha komunikace CIB modul #6 - Modul pro směšování 02'
+  modbus_address: 210
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_11:
+  friendly_name: PZP Porucha "Sled fází"
+  modbus_address: 211
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_12:
+  friendly_name: PZP Porucha "Vysoký tlak kompresoru"
+  modbus_address: 212
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_13:
+  friendly_name: PZP Porucha "Nízký tlak kompresoru"
+  modbus_address: 213
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_14:
+  friendly_name: PZP Porucha "Tepelné přetížení kompresoru"
+  modbus_address: 214
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_15:
+  friendly_name: PZP Porucha "Jištění, nebo přetížení ventilátoru"
+  modbus_address: 215
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_16:
+  friendly_name: PZP Porucha "Přímotopného dohřevu teplé vody"
+  modbus_address: 216
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_17:
+  friendly_name: PZP Porucha "Překročena maximální teplota v topném systému"
+  modbus_address: 217
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_18:
+  friendly_name: PZP Porucha "Pokles teploty v topném systému pod minimální hranici"
+  modbus_address: 218
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_19:
+  friendly_name: PZP Porucha "Malý průtok sekundárním okruhem"
+  modbus_address: 219
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_20:
+  friendly_name: PZP Porucha "Elektrokotel"
+  modbus_address: 220
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_21:
+  friendly_name: PZP Porucha teplotní sondy B07
+  modbus_address: 221
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_22:
+  friendly_name: PZP Porucha teplotní sondy B08
+  modbus_address: 222
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_23:
+  friendly_name: PZP Porucha "Průtok primárním okruhem"
+  modbus_address: 223
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_24:
+  friendly_name: 'PZP Porucha komunikace CIB modul #7 - Modul pro bazén'
+  modbus_address: 224
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_25:
+  friendly_name: PZP Porucha teplotní sondy B16
+  modbus_address: 225
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_26:
+  friendly_name: PZP Porucha komunikace – Ovladač EEV
+  modbus_address: 226
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_27:
+  friendly_name: PZP Poškozená EEPROM – Ovladač EEV
+  modbus_address: 227
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_28:
+  friendly_name: PZP Porucha sondy S1 – Ovladač EEV
+  modbus_address: 228
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_29:
+  friendly_name: PZP Porucha sondy S2 – Ovladač EEV
+  modbus_address: 229
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_30:
+  friendly_name: PZP Porucha motoru – Ovladač EEV
+  modbus_address: 230
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_200_31:
+  friendly_name: PZP Porucha komunikace – EC Ventilátor
+  modbus_address: 231
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_233:
+  friendly_name: PZP Porucha teplotní sondy B10
+  modbus_address: 233
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_233_1:
+  friendly_name: PZP Porucha komunikace modul chlazení - CIB#08
+  modbus_address: 234
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_233_2:
+  friendly_name: PZP Porucha teplotní sondy B19
+  modbus_address: 235
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_233_3:
+  friendly_name: PZP Porucha komunikace modul velkokapacitních nádob - CIB#09
+  modbus_address: 236
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_233_4:
+  friendly_name: PZP Porucha teplotni sondy B18
+  modbus_address: 237
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_233_5:
+  friendly_name: PZP Porucha "Nízký výkon kompresoru"
+  modbus_address: 238
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_300:
+  friendly_name: PZP Provoz kompresoru
+  modbus_address: 300
+  modbus_type: coil
+binary_sensor.pzp_bit_300_1:
+  friendly_name: PZP Požadavek na provoz kompresoru
+  modbus_address: 301
+  modbus_type: coil
+binary_sensor.pzp_bit_300_2:
+  friendly_name: PZP Blokování od nedostatečného příkonu tepelného čerpadla
+  modbus_address: 302
+  modbus_type: coil
+binary_sensor.pzp_bit_300_3:
+  friendly_name: PZP Blokování provozu kompresoru
+  modbus_address: 303
+  modbus_type: coil
+binary_sensor.pzp_bit_300_4:
+  friendly_name: PZP Blokování od poruchy tepelného čerpadla
+  modbus_address: 304
+  modbus_type: coil
+binary_sensor.pzp_bit_300_5:
+  friendly_name: PZP Blokování od provozního stavu tepelného čerpadla
+  modbus_address: 305
+  modbus_type: coil
+binary_sensor.pzp_bit_300_6:
+  friendly_name: PZP Provoz oběhového čerpadla tepelného čerpadla OČs
+  modbus_address: 306
+  modbus_type: coil
+binary_sensor.pzp_bit_300_7:
+  friendly_name: PZP Blokování od vysoká teplota v okruhu tepelného čerpadla
+  modbus_address: 307
+  modbus_type: coil
+binary_sensor.pzp_bit_300_8:
+  friendly_name: PZP Blokování od anticyklické ochrany zapnutí
+  modbus_address: 308
+  modbus_type: coil
+binary_sensor.pzp_bit_300_9:
+  friendly_name: PZP Blokování od anticyklické ochrany vypnutí
+  modbus_address: 309
+  modbus_type: coil
+binary_sensor.pzp_bit_300_10:
+  friendly_name: PZP Blokování od nízká teplota v okolí výparníku při topení
+  modbus_address: 310
+  modbus_type: coil
+binary_sensor.pzp_bit_300_11:
+  friendly_name: PZP Blokování od vysoká teplota v okolí výparníku při topení
+  modbus_address: 311
+  modbus_type: coil
+binary_sensor.pzp_bit_300_12:
+  friendly_name: PZP Blokování od nízká teplota v okruhu tepelného čerpadla
+  modbus_address: 312
+  modbus_type: coil
+binary_sensor.pzp_bit_300_13:
+  friendly_name: PZP Nedostatečná teplota v okruhu tepelného čerpadla pro start odtávání reverzací
+  modbus_address: 313
+  modbus_type: coil
+binary_sensor.pzp_bit_300_14:
+  friendly_name: PZP Provoz oběhového čerpadla primárního okruhu
+  modbus_address: 314
+  modbus_type: coil
+binary_sensor.pzp_bit_300_15:
+  friendly_name: PZP Blokování od nízké teploty chlazené kapaliny primárního okruhu
+  modbus_address: 315
+  modbus_type: coil
+binary_sensor.pzp_bit_300_16:
+  friendly_name: PZP Blokování od vysoké teploty chlazené kapaliny primárního okruhu
+  modbus_address: 316
+  modbus_type: coil
+binary_sensor.pzp_bit_300_17:
+  friendly_name: PZP Blokování od Minimální teplota okolí výparníku pro funkci kompresoru při chlazení
+  modbus_address: 317
+  modbus_type: coil
+binary_sensor.pzp_bit_300_18:
+  friendly_name: PZP Blokovani od Maximalní teplota okolí výparníku pro funkci kompresoru při chlazení
+  modbus_address: 318
+  modbus_type: coil
+binary_sensor.pzp_bit_300_19:
+  friendly_name: PZP Blokování od Minimální teplota v okruhu tepelného čerpadla pro provoz kompresoru při chlazení
+  modbus_address: 319
+  modbus_type: coil
+binary_sensor.pzp_bit_300_20:
+  friendly_name: PZP Blokování od Maximální vstupní teplota chlazené vody za provozu kompresoru
+  modbus_address: 320
+  modbus_type: coil
+binary_sensor.pzp_bit_300_21:
+  friendly_name: PZP blokovani od Alternativni bivalence
+  modbus_address: 321
+  modbus_type: coil
+binary_sensor.pzp_bit_300_22:
+  friendly_name: PZP Kompresor je pripraven k provozu (neni blokovan stavem ani poruchou ani HDO)
+  modbus_address: 322
+  modbus_type: coil
+binary_sensor.pzp_bit_350:
+  friendly_name: PZP Probíhá odtávání doběhem ventilátorů
+  modbus_address: 350
+  modbus_type: coil
+binary_sensor.pzp_bit_350_1:
+  friendly_name: PZP Provoz ventilátorů
+  modbus_address: 351
+  modbus_type: coil
+binary_sensor.pzp_bit_350_2:
+  friendly_name: PZP Požadavek na odtávání doběhem ventilátorů
+  modbus_address: 352
+  modbus_type: coil
+binary_sensor.pzp_bit_350_3:
+  friendly_name: PZP Požadavek na odtávání reverzací
+  modbus_address: 353
+  modbus_type: coil
+binary_sensor.pzp_bit_350_4:
+  friendly_name: PZP Probíhá odtávání reverzací
+  modbus_address: 354
+  modbus_type: coil
+binary_sensor.pzp_bit_350_5:
+  friendly_name: PZP Probíhá odtávání
+  modbus_address: 355
+  modbus_type: coil
+binary_sensor.pzp_bit_400:
+  friendly_name: PZP Elektrokotel je pro regulaci k dispozici
+  modbus_address: 400
+  modbus_type: coil
+binary_sensor.pzp_bit_400_1:
+  friendly_name: PZP Topné těleso 1 je pro regulaci k dispozici
+  modbus_address: 401
+  modbus_type: coil
+binary_sensor.pzp_bit_400_2:
+  friendly_name: PZP Topné těleso 2 je pro regulaci k dispozici
+  modbus_address: 402
+  modbus_type: coil
+binary_sensor.pzp_bit_400_3:
+  friendly_name: PZP Provoz elektrokotle
+  modbus_address: 403
+  modbus_type: coil
+binary_sensor.pzp_bit_400_4:
+  friendly_name: PZP Provoz topného tělesa 1
+  modbus_address: 404
+  modbus_type: coil
+binary_sensor.pzp_bit_400_5:
+  friendly_name: PZP Provoz topného tělesa 2
+  modbus_address: 405
+  modbus_type: coil
+binary_sensor.pzp_bit_450:
+  friendly_name: PZP Upozornění na servisní prohlídku tepelného čerpadla
+  modbus_address: 450
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_500:
+  friendly_name: PZP Překročena maximální teplota na vstupu tepelného čerpadla
+  modbus_address: 500
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_550:
+  friendly_name: PZP Směšování 01 - aktivní Close
+  modbus_address: 550
+  modbus_type: coil
+binary_sensor.pzp_bit_550_1:
+  friendly_name: PZP Směšování 01 - aktivní Open
+  modbus_address: 551
+  modbus_type: coil
+binary_sensor.pzp_bit_550_2:
+  friendly_name: PZP Směšování 01 je k dispozici
+  modbus_address: 552
+  modbus_type: coil
+binary_sensor.pzp_bit_560:
+  friendly_name: PZP Směšování 02 - aktivní Close
+  modbus_address: 560
+  modbus_type: coil
+binary_sensor.pzp_bit_560_1:
+  friendly_name: PZP Směšování 02 - aktivní Open
+  modbus_address: 561
+  modbus_type: coil
+binary_sensor.pzp_bit_560_2:
+  friendly_name: PZP Směšování 02 je k dispozici
+  modbus_address: 562
+  modbus_type: coil
+binary_sensor.pzp_bit_600:
+  friendly_name: PZP Požadavek na ohřev teplé vody
+  modbus_address: 600
+  modbus_type: coil
+binary_sensor.pzp_bit_600_1:
+  friendly_name: PZP Poloha ventilu teplé vody
+  modbus_address: 601
+  modbus_type: coil
+binary_sensor.pzp_bit_600_2:
+  friendly_name: PZP Požadavek na ohřev teplé vody - komfortní teplota
+  modbus_address: 602
+  modbus_type: coil
+binary_sensor.pzp_bit_600_3:
+  friendly_name: PZP Blokování dohřevu komfortní teploty teplé vody
+  modbus_address: 603
+  modbus_type: coil
+binary_sensor.pzp_bit_600_4:
+  friendly_name: PZP Blokování funkce přípravy teplé vody externím signálem
+  modbus_address: 604
+  modbus_type: coil
+binary_sensor.pzp_bit_600_5:
+  friendly_name: 'PZP Požadavek na ohřev teplé vody - útlumová teplota '
+  modbus_address: 605
+  modbus_type: coil
+binary_sensor.pzp_bit_600_6:
+  friendly_name: PZP Požadavek na ohřev teplé vody - proti Legionele
+  modbus_address: 606
+  modbus_type: coil
+binary_sensor.pzp_bit_630:
+  friendly_name: PZP Probíhá přímotopný dohřev teplé vody
+  modbus_address: 630
+  modbus_type: coil
+binary_sensor.pzp_bit_630_1:
+  friendly_name: PZP Požadavek na přímotopný dohřev teplé vody
+  modbus_address: 631
+  modbus_type: coil
+binary_sensor.pzp_bit_630_2:
+  friendly_name: PZP Probíhá nepřímotopný dohřev teplé vody
+  modbus_address: 632
+  modbus_type: coil
+binary_sensor.pzp_bit_630_3:
+  friendly_name: PZP Požadavek na nepřímotopný dohřev teplé vody
+  modbus_address: 633
+  modbus_type: coil
+binary_sensor.pzp_bit_630_4:
+  friendly_name: PZP Probíhá ohřev teplé vody
+  modbus_address: 634
+  modbus_type: coil
+binary_sensor.pzp_bit_650:
+  friendly_name: PZP Požadavek na provoz vytápění
+  modbus_address: 650
+  modbus_type: coil
+binary_sensor.pzp_bit_650_1:
+  friendly_name: PZP Provoz OČ-TOx
+  modbus_address: 651
+  modbus_type: coil
+binary_sensor.pzp_bit_650_2:
+  friendly_name: PZP Provoz OČ-TO1
+  modbus_address: 652
+  modbus_type: coil
+binary_sensor.pzp_bit_650_3:
+  friendly_name: PZP Provoz OČ-TO2
+  modbus_address: 653
+  modbus_type: coil
+binary_sensor.pzp_bit_650_4:
+  friendly_name: PZP Provoz OČ-TO3
+  modbus_address: 654
+  modbus_type: coil
+binary_sensor.pzp_bit_650_5:
+  friendly_name: PZP Provoz OČ-TO4
+  modbus_address: 655
+  modbus_type: coil
+binary_sensor.pzp_bit_650_6:
+  friendly_name: PZP pozadavek na program suseni v AKU
+  modbus_address: 656
+  modbus_type: coil
+binary_sensor.pzp_bit_650_7:
+  friendly_name: PZP pozadavek na program suseni na MIX1
+  modbus_address: 657
+  modbus_type: coil
+binary_sensor.pzp_bit_650_8:
+  friendly_name: PZP pozadavek na program suseni na MIX2
+  modbus_address: 658
+  modbus_type: coil
+binary_sensor.pzp_bit_650_9:
+  friendly_name: PZP Ohřev bazénu
+  modbus_address: 659
+  modbus_type: coil
+binary_sensor.pzp_bit_650_10:
+  friendly_name: PZP Filatrace bazénu
+  modbus_address: 660
+  modbus_type: coil
+binary_sensor.pzp_bit_650_11:
+  friendly_name: PZP Požadavek na ohřev bazénu
+  modbus_address: 661
+  modbus_type: coil
+binary_sensor.pzp_bit_650_12:
+  friendly_name: PZP Topný okruch 01 je k dispozici
+  modbus_address: 662
+  modbus_type: coil
+binary_sensor.pzp_bit_650_13:
+  friendly_name: PZP Topný okruch 02 je k dispozici
+  modbus_address: 663
+  modbus_type: coil
+binary_sensor.pzp_bit_650_14:
+  friendly_name: PZP Topný okruch 03 je k dispozici
+  modbus_address: 664
+  modbus_type: coil
+binary_sensor.pzp_bit_650_15:
+  friendly_name: PZP Topný okruch 04 je k dispozici
+  modbus_address: 665
+  modbus_type: coil
+binary_sensor.pzp_bit_700:
+  friendly_name: PZP Požadavek na provoz vytápění do akumulační nádoby
+  modbus_address: 700
+  modbus_type: coil
+binary_sensor.pzp_bit_700_1:
+  friendly_name: PZP Probíhá vytápění
+  modbus_address: 701
+  modbus_type: coil
+binary_sensor.pzp_bit_700_2:
+  friendly_name: PZP Probíhá předehřev teplé vody
+  modbus_address: 702
+  modbus_type: coil
+binary_sensor.pzp_bit_700_3:
+  friendly_name: PZP Aktivní trvalý provoz vytápění - externí signál
+  modbus_address: 703
+  modbus_type: coil
+binary_sensor.pzp_bit_700_4:
+  friendly_name: PZP Reg. bod vytápění je ovlivněn reg. bodem směšování 01
+  modbus_address: 704
+  modbus_type: coil
+binary_sensor.pzp_bit_700_5:
+  friendly_name: PZP Reg. bod vytápění je ovlivněn reg. bodem směšování 02
+  modbus_address: 705
+  modbus_type: coil
+binary_sensor.pzp_bit_750:
+  friendly_name: PZP Provoz RM01, online
+  modbus_address: 750
+  modbus_type: coil
+binary_sensor.pzp_bit_750_1:
+  friendly_name: PZP Termostat RM01 pro topení
+  modbus_address: 751
+  modbus_type: coil
+binary_sensor.pzp_bit_750_2:
+  friendly_name: PZP Termostat RM01 pro chlazení
+  modbus_address: 752
+  modbus_type: coil
+binary_sensor.pzp_bit_760:
+  friendly_name: PZP Provoz RM02, online
+  modbus_address: 760
+  modbus_type: coil
+binary_sensor.pzp_bit_760_1:
+  friendly_name: PZP Termostat RM02 pro topení
+  modbus_address: 761
+  modbus_type: coil
+binary_sensor.pzp_bit_760_2:
+  friendly_name: PZP Termostat RM02 pro chlazení
+  modbus_address: 762
+  modbus_type: coil
+binary_sensor.pzp_bit_770:
+  friendly_name: PZP Provoz RM03, online
+  modbus_address: 770
+  modbus_type: coil
+binary_sensor.pzp_bit_770_1:
+  friendly_name: PZP Termostat RM03 pro topení
+  modbus_address: 771
+  modbus_type: coil
+binary_sensor.pzp_bit_770_2:
+  friendly_name: PZP Termostat RM03 pro chlazení
+  modbus_address: 772
+  modbus_type: coil
+binary_sensor.pzp_bit_780:
+  friendly_name: PZP Provoz RM04, online
+  modbus_address: 780
+  modbus_type: coil
+binary_sensor.pzp_bit_780_1:
+  friendly_name: PZP Termostat RM04 pro topení
+  modbus_address: 781
+  modbus_type: coil
+binary_sensor.pzp_bit_780_2:
+  friendly_name: PZP Termostat RM04 pro chlazení
+  modbus_address: 782
+  modbus_type: coil
+binary_sensor.pzp_bit_800:
+  friendly_name: PZP Provoz externího zdroje tepla
+  modbus_address: 800
+  modbus_type: coil
+binary_sensor.pzp_bit_800_1:
+  friendly_name: PZP Externí zdroj tepla je pro regulaci k dispozici
+  modbus_address: 801
+  modbus_type: coil
+binary_sensor.pzp_bit_800_2:
+  friendly_name: PZP Anticyklická ochrana zapnutí externího zdroje tepla
+  modbus_address: 802
+  modbus_type: coil
+binary_sensor.pzp_bit_850:
+  friendly_name: PZP GSM modem je připojen
+  modbus_address: 850
+  modbus_type: coil
+binary_sensor.pzp_bit_850_1:
+  friendly_name: PZP GSM modem - SIM karta je vložena
+  modbus_address: 851
+  modbus_type: coil
+binary_sensor.pzp_bit_850_2:
+  friendly_name: PZP GSM Modem - Signál
+  modbus_address: 852
+  modbus_type: coil
+binary_sensor.pzp_bit_1000:
+  friendly_name: PZP Blokování signálem HDO
+  modbus_address: 1000
+  modbus_type: coil
+binary_sensor.pzp_bit_1000_1:
+  friendly_name: PZP PLC je v DEMO režimu
+  modbus_address: 1001
+  modbus_type: coil
+binary_sensor.pzp_bit_1000_2:
+  friendly_name: PZP PLC je v testovacím režimu
+  modbus_address: 1002
+  modbus_type: coil
+binary_sensor.pzp_bit_1000_3:
+  friendly_name: PZP PLC je v servisním režimu
+  modbus_address: 1003
+  modbus_type: coil
+binary_sensor.pzp_bit_1000_4:
+  friendly_name: PZP Letní provoz tepelného čerpadla
+  modbus_address: 1004
+  modbus_type: coil
+binary_sensor.pzp_bit_1000_5:
+  friendly_name: 'PZP Varování pro zadání aktivačního PIN kódu '
+  modbus_address: 1005
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_1000_6:
+  friendly_name: PZP Servisní alarm (aktivační PIN kód)
+  modbus_address: 1006
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_1000_7:
+  friendly_name: PZP Tepelné čerpadlo je v poruše
+  modbus_address: 1007
+  modbus_type: coil
+  device_class: problem
+binary_sensor.pzp_bit_2000:
+  friendly_name: PZP Ruční vypnutí kompresoru
+  modbus_address: 2000
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_1:
+  friendly_name: PZP Ruční vypnutí elektrokotle
+  modbus_address: 2001
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_2:
+  friendly_name: PZP Povolit doplňkový zdroj tepla
+  modbus_address: 2002
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_3:
+  friendly_name: PZP Reset poruchy
+  modbus_address: 2003
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_4:
+  friendly_name: PZP Standardní provoz při poruše tepelného čerpadla
+  modbus_address: 2004
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_5:
+  friendly_name: PZP Signalizace poruchy
+  modbus_address: 2005
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_6:
+  friendly_name: PZP Manuální nastavení regulačního bodu směšování 01
+  modbus_address: 2006
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_7:
+  friendly_name: PZP Manuální nastavení regulačního bodu směšování 02
+  modbus_address: 2007
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_8:
+  friendly_name: PZP Povolit funkci přípravy teplé vody
+  modbus_address: 2008
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_9:
+  friendly_name: PZP Manuální nastavení regulačního bodu topení
+  modbus_address: 2009
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_10:
+  friendly_name: PZP Povolit předehřev teplé vody
+  modbus_address: 2010
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_11:
+  friendly_name: PZP Funkce termostatu pro pokojový terminál 01
+  modbus_address: 2011
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_12:
+  friendly_name: PZP Párty režim pro pokojový terminál 01
+  modbus_address: 2012
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_13:
+  friendly_name: PZP Dětský zámek pro pokojový terminál 01
+  modbus_address: 2013
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_14:
+  friendly_name: PZP Funkce termostatu pro pokojový terminál 02
+  modbus_address: 2014
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_15:
+  friendly_name: PZP Párty režim pro pokojový terminál 02
+  modbus_address: 2015
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_16:
+  friendly_name: PZP Dětský zámek pro pokojový terminál 02
+  modbus_address: 2016
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_17:
+  friendly_name: PZP Funkce termostatu pro pokojový terminál 03
+  modbus_address: 2017
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_18:
+  friendly_name: PZP Párty režim pro pokojový terminál 03
+  modbus_address: 2018
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_19:
+  friendly_name: PZP Dětský zámek pro pokojový terminál 03
+  modbus_address: 2019
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_20:
+  friendly_name: PZP Funkce termostatu pro pokojový terminál 04
+  modbus_address: 2020
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_21:
+  friendly_name: PZP Párty režim pro pokojový terminál 04
+  modbus_address: 2021
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_22:
+  friendly_name: PZP Dětský zámek pro pokojový terminál 04
+  modbus_address: 2022
+  modbus_type: coil
+binary_sensor.pzp_bit_2000_23:
+  friendly_name: PZP Pohotovostní režim tepelného čerpadla
+  modbus_address: 2023
+  modbus_type: coil
+binary_sensor.pzp_bit_2029:
+  friendly_name: PZP Ruční vypnutí externího doplňkového zdroje tepla
+  modbus_address: 2029
+  modbus_type: coil
+binary_sensor.pzp_bit_2029_1:
+  friendly_name: PZP Vytápění v letním období
+  modbus_address: 2030
+  modbus_type: coil
+binary_sensor.pzp_bit_2029_2:
+  friendly_name: PZP Ohřev bazénu
+  modbus_address: 2031
+  modbus_type: coil
+binary_sensor.pzp_bit_2029_3:
+  friendly_name: PZP Chlazení v období topná sezóna
+  modbus_address: 2032
+  modbus_type: coil
+binary_sensor.pzp_bit_50000:
+  friendly_name: PZP Nadřazené řízení tepelného čerpadla je aktivní
+  modbus_address: 50000
+  modbus_type: coil

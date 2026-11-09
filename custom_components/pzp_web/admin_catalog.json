@@ -1,0 +1,1990 @@
+{
+  "language": {
+    "name": "Jazyk",
+    "page": "/PAGE32.XML",
+    "version": "1642510286",
+    "symbols": [
+      "__T6B6D7673_BOOL_i",
+      "__TD85F8C1C_BOOL_i",
+      "__T69FC9542_STRING[7]_s",
+      "__T0BAE5530_BOOL_i",
+      "__TC1825579_BOOL_i"
+    ],
+    "fields": [
+      {
+        "key": "language",
+        "label": "Jazyk rozhraní",
+        "indices": [
+          0,
+          1
+        ],
+        "kind": "choice",
+        "options": {
+          "Čeština": 0,
+          "Deutsch": 1
+        },
+        "command": "__TBCDC6D40_USINT_u",
+        "language": true
+      }
+    ],
+    "note": ""
+  },
+  "clock": {
+    "name": "Datum a čas",
+    "page": "/PAGE34.XML",
+    "version": "1663333001",
+    "symbols": [
+      "__TDBACE7EE_STRING[80]_s",
+      "__T6086A41E_STRING[80]_s",
+      "__TF634BED9_STRING[14]_s",
+      "__TCBAC7B0D_STRING[10]_s",
+      "__T68435FE7_BOOL_i",
+      "__T8435A779_STRING[15]_s",
+      "__TE0965C13_STRING[27]_s",
+      "__TD9DD73B7_BOOL_i"
+    ],
+    "fields": [
+      {
+        "key": "clock",
+        "label": "Datum a čas",
+        "indices": [
+          1,
+          0
+        ],
+        "kind": "editor",
+        "editor": "/PAGE388.XML",
+        "command": "__T187F3281_SINT_d",
+        "editor_version": "1642510290",
+        "editor_symbols": [
+          "__TE434EEAE_USINT_u",
+          "__T51AC4A9C_STRING[100]_s",
+          "__TB12480DA_USINT_u",
+          "__TCB5908F3_USINT_u",
+          "__T2C9F5F6E_USINT_u",
+          "__TF0D42A07_USINT_u",
+          "__TA364EBF8_UINT_u"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          14
+        ],
+        "title_prefix": "",
+        "editor_labels": [
+          "Hodiny",
+          "Název",
+          "Minuty",
+          "Sekundy",
+          "Den",
+          "Měsíc",
+          "Rok"
+        ],
+        "key_labels": {
+          "0": "Hodiny +",
+          "1": "Hodiny −",
+          "2": "Minuty +",
+          "3": "Minuty −",
+          "4": "Sekundy +",
+          "5": "Sekundy −",
+          "6": "Den +",
+          "7": "Den −",
+          "8": "Měsíc +",
+          "9": "Měsíc −",
+          "10": "Rok +",
+          "11": "Rok −"
+        }
+      },
+      {
+        "key": "zone",
+        "label": "Časové pásmo UTC",
+        "indices": [
+          3
+        ],
+        "kind": "editor",
+        "editor": "/PAGE389.XML",
+        "command": "__TA36D6421_SINT_d",
+        "editor_version": "1642510290",
+        "editor_symbols": [
+          "__T838F89EC_DINT_d",
+          "__TB132F4ED_STRING[100]_s",
+          "__TFC14E5C8_DINT_d"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          14
+        ],
+        "title_prefix": "",
+        "editor_labels": [
+          "Hodiny UTC",
+          "Název",
+          "Minuty UTC"
+        ],
+        "key_labels": {
+          "0": "Hodiny UTC +",
+          "1": "Hodiny UTC −",
+          "2": "Minuty UTC +",
+          "3": "Minuty UTC −"
+        }
+      },
+      {
+        "key": "dst",
+        "label": "Automatická změna letního času",
+        "indices": [
+          4
+        ],
+        "kind": "bool"
+      }
+    ],
+    "note": "Hodiny a časové programy běží v regulátoru i při vypnutém HA."
+  },
+  "network": {
+    "name": "Síť čerpadla",
+    "page": "/PAGE35.XML",
+    "version": "1663573031",
+    "symbols": [
+      "__T5DBE3043_BOOL_i",
+      "__T51983C65_BOOL_i",
+      "__TD4A6B95B_BOOL_i",
+      "__T3BF5F313_BOOL_i",
+      "__TB3F213D6_STRING[10]_s",
+      "__TB0BE139F_STRING[5]_s",
+      "__TB56A1344_STRING[7]_s",
+      "__TBD8E12BB_STRING[3]_s",
+      "__TCAF9A704_BOOL_i",
+      "__TA0BBE8B1_BOOL_i",
+      "__TE7191082_USINT_u",
+      "__TA6275982_USINT_u",
+      "__T65658282_USINT_u",
+      "__T245BCB82_USINT_u",
+      "__T64340553_USINT_u",
+      "__T250A4C53_USINT_u",
+      "__TE6489753_USINT_u",
+      "__TA776DE53_USINT_u",
+      "__TE10A3B20_USINT_u",
+      "__TA0347220_USINT_u",
+      "__T6376A920_USINT_u",
+      "__T2248E020_USINT_u",
+      "__T68125217_USINT_u",
+      "__T292C1B17_USINT_u",
+      "__TEA6EC017_USINT_u",
+      "__TAB508917_USINT_u",
+      "__T23966B9C_BOOL_i",
+      "__T6EC3A646_STRING[21]_s",
+      "__TCAB5CBCF_BOOL_i",
+      "__T7054ED03_BOOL_i",
+      "__T24BAF94F_STRING[30]_s",
+      "__T310080FC_BOOL_i"
+    ],
+    "fields": [
+      {
+        "key": "ip",
+        "label": "IP adresa",
+        "indices": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "kind": "editor",
+        "join": ".",
+        "format": "ip",
+        "editor": "/PAGE339.XML",
+        "command": "__T688636DB_SINT_d",
+        "editor_version": "1642510289",
+        "editor_symbols": [
+          "__TF3181B66_STRING[16]_s",
+          "__TAF708B0B_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "U010:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        },
+        "blocked_index": 28
+      },
+      {
+        "key": "mask",
+        "label": "Maska",
+        "indices": [
+          14,
+          15,
+          16,
+          17
+        ],
+        "kind": "editor",
+        "join": ".",
+        "format": "ip",
+        "editor": "/PAGE340.XML",
+        "command": "__T70B277E5_SINT_d",
+        "editor_version": "1642510289",
+        "editor_symbols": [
+          "__TEB2C5A58_STRING[16]_s",
+          "__TB744457F_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "U011:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        },
+        "blocked_index": 28
+      },
+      {
+        "key": "gateway",
+        "label": "Brána",
+        "indices": [
+          18,
+          19,
+          20,
+          21
+        ],
+        "kind": "editor",
+        "join": ".",
+        "format": "ip",
+        "editor": "/PAGE341.XML",
+        "command": "__T58EEB4A7_SINT_d",
+        "editor_version": "1642510289",
+        "editor_symbols": [
+          "__TC370991A_STRING[16]_s",
+          "__T9F1817AA_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "U012:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        },
+        "blocked_index": 28
+      },
+      {
+        "key": "dns",
+        "label": "DNS",
+        "indices": [
+          22,
+          23,
+          24,
+          25
+        ],
+        "kind": "editor",
+        "join": ".",
+        "format": "ip",
+        "editor": "/PAGE342.XML",
+        "command": "__T10627354_SINT_d",
+        "editor_version": "1642510289",
+        "editor_symbols": [
+          "__T8BFC5EE9_STRING[16]_s",
+          "__TD7947C74_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "U015:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        },
+        "blocked_index": 28
+      },
+      {
+        "key": "dhcp",
+        "label": "DHCP",
+        "indices": [
+          9
+        ],
+        "kind": "bool",
+        "visible": 8,
+        "blocked_index": 28
+      },
+      {
+        "key": "state",
+        "label": "Stav nastavení",
+        "indices": [
+          30
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "refresh",
+        "label": "Načíst aktuální síť regulátoru",
+        "indices": [
+          29
+        ],
+        "kind": "pulse",
+        "blocked_index": 28
+      },
+      {
+        "key": "save",
+        "label": "Uložit síť do regulátoru",
+        "indices": [
+          26
+        ],
+        "kind": "pulse",
+        "confirm": "Uložit síť čerpadla? Změna může odpojit HA i vzdálený přístup k čerpadlu.",
+        "blocked_index": 28
+      }
+    ],
+    "note": "Adresa používaná Home Assistantem a údaje LAN regulátoru se mohou lišit, například při Wi-Fi mostu. Uložení sítě může přerušit spojení. Adresu v routeru ani Modbus YAML tento panel nemění."
+  },
+  "weather": {
+    "name": "Předpověď počasí",
+    "page": "/PAGE76.XML",
+    "version": "1601874329",
+    "symbols": [
+      "__TED881383_STRING[80]_s",
+      "__T1DDAC6F8_STRING[21]_s",
+      "__T646553C1_STRING[40]_s",
+      "__TE15BD6FF_STRING[40]_s",
+      "__TF16E7543_BOOL_i",
+      "__T627655D2_STRING[40]_s",
+      "__TCAB5CBCF_BOOL_i"
+    ],
+    "fields": [
+      {
+        "key": "status",
+        "label": "Stav služby",
+        "indices": [
+          0
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "city",
+        "label": "Město (U045)",
+        "indices": [
+          2
+        ],
+        "kind": "form",
+        "max": 40,
+        "blocked_index": 6
+      },
+      {
+        "key": "country",
+        "label": "Země (U046)",
+        "indices": [
+          3
+        ],
+        "kind": "form",
+        "max": 40,
+        "blocked_index": 6
+      },
+      {
+        "key": "api",
+        "label": "API klíč (U047)",
+        "indices": [
+          5
+        ],
+        "kind": "form",
+        "max": 40,
+        "secret": true,
+        "blocked_index": 6
+      }
+    ],
+    "note": "",
+    "commit": "__T704AB271_BOOL_i"
+  },
+  "email": {
+    "name": "E-mail",
+    "page": "/PAGE36.XML",
+    "version": "1663333037",
+    "symbols": [
+      "__TAE5A454D_STRING[6]_s",
+      "__T0780645E_STRING[80]_s",
+      "__T2C79BF0D_BOOL_i",
+      "__T463BF0B8_STRING[80]_s",
+      "__TF0EB1C31_BOOL_i",
+      "__T9AA95384_BOOL_i",
+      "__T7FE0933A_BOOL_i",
+      "__T15A2DC8F_STRING[80]_s",
+      "__TFADE1604_BOOL_i",
+      "__T909C59B1_STRING[80]_s",
+      "__T530FB14D_BOOL_i",
+      "__T2D6CB5AB_BOOL_i",
+      "__T98084B22_BOOL_i",
+      "__TC9307FB3_BOOL_i",
+      "__T443C7E47_USINT_u",
+      "__TDF395ADF_BOOL_i",
+      "__T69E9B656_BOOL_i",
+      "__T03ABF9E3_BOOL_i",
+      "__TCAB5CBCF_BOOL_i",
+      "__TD9DD73B7_BOOL_i"
+    ],
+    "fields": [
+      {
+        "key": "recipients",
+        "label": "Příjemci",
+        "indices": [
+          1
+        ],
+        "kind": "form",
+        "max": 80,
+        "secret": false,
+        "visible": null,
+        "blocked_index": 18
+      },
+      {
+        "key": "smtp",
+        "label": "SMTP server",
+        "indices": [
+          3
+        ],
+        "kind": "form",
+        "max": 80,
+        "secret": false,
+        "visible": 2,
+        "blocked_index": 18
+      },
+      {
+        "key": "user",
+        "label": "SMTP uživatel",
+        "indices": [
+          7
+        ],
+        "kind": "form",
+        "max": 80,
+        "secret": false,
+        "visible": 6,
+        "blocked_index": 18
+      },
+      {
+        "key": "password",
+        "label": "SMTP heslo",
+        "indices": [
+          9
+        ],
+        "kind": "form",
+        "max": 80,
+        "secret": true,
+        "visible": 8,
+        "blocked_index": 18
+      },
+      {
+        "key": "auth",
+        "label": "SMTP ověřování",
+        "indices": [
+          5
+        ],
+        "kind": "bool",
+        "visible": 4,
+        "blocked_index": 18
+      },
+      {
+        "key": "enabled",
+        "label": "Odesílání e-mailů",
+        "indices": [
+          13
+        ],
+        "kind": "bool",
+        "blocked_index": 18
+      },
+      {
+        "key": "automatic",
+        "label": "Automatické nastavení SMTP",
+        "indices": [
+          17
+        ],
+        "kind": "bool",
+        "visible": 16,
+        "blocked_index": 18
+      },
+      {
+        "key": "language",
+        "label": "Jazyk zpráv",
+        "indices": [
+          14
+        ],
+        "kind": "choice",
+        "options": {
+          "Čeština": 0,
+          "Deutsch": 1
+        },
+        "command": "__T5032D5D4_USINT_u",
+        "blocked_index": 18
+      },
+      {
+        "key": "test",
+        "label": "Odeslat testovací e-mail",
+        "indices": [
+          15
+        ],
+        "kind": "pulse",
+        "confirm": "Odeslat testovací zprávu nastaveným příjemcům?",
+        "blocked_index": 18
+      }
+    ],
+    "note": "SMTP používá port 25 stejně jako původní rozhraní. Testovací zprávu odešle pouze tlačítko Test."
+  },
+  "remote": {
+    "name": "Vzdálená služba PZP",
+    "page": "/PAGE321.XML",
+    "version": "1597405390",
+    "symbols": [
+      "__T24C26991_STRING[32]_s",
+      "__TE3B5D8C5_STRING[10]_s",
+      "__T03D6379F_STRING[40]_s",
+      "__TAEFED591_BOOL_i",
+      "__TBFF615CA_STRING[63]_s",
+      "__TCFD7A3D2_STRING[15]_s",
+      "__TE853FD2A_STRING[15]_s",
+      "__T94EBCD8B_BOOL_i",
+      "__T9DB04EA6_BOOL_i",
+      "__T865DCB98_BOOL_i",
+      "__T8F0648B5_BOOL_i",
+      "__TB187C1AD_UINT_u",
+      "__TB8DC4280_UINT_u",
+      "__TA331C7BE_UDINT_u",
+      "__TAA6A4493_UDINT_u",
+      "__TDE33D5C7_UDINT_u"
+    ],
+    "fields": [
+      {
+        "key": "status5",
+        "label": "Stav služby",
+        "indices": [
+          5
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status6",
+        "label": "Stav ovladače",
+        "indices": [
+          6
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status4",
+        "label": "Poslední chyba",
+        "indices": [
+          4
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status7",
+        "label": "Připojení ke službě",
+        "indices": [
+          7
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status8",
+        "label": "Chyba PLC",
+        "indices": [
+          8
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status9",
+        "label": "Služba připojena",
+        "indices": [
+          9
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status10",
+        "label": "Chyba služby",
+        "indices": [
+          10
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status11",
+        "label": "Časovač komunikace",
+        "indices": [
+          11
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status12",
+        "label": "Časovač ovladače",
+        "indices": [
+          12
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status13",
+        "label": "Odeslané pakety",
+        "indices": [
+          13
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status14",
+        "label": "Přijaté pakety",
+        "indices": [
+          14
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "status15",
+        "label": "Výpadky spojení",
+        "indices": [
+          15
+        ],
+        "kind": "read"
+      },
+      {
+        "key": "reset",
+        "label": "Reset připojení služby PZP (U050)",
+        "indices": [
+          3
+        ],
+        "kind": "pulse",
+        "confirm": "Resetovat připojení ke vzdálené službě PZP? Běžné řízení čerpadla tím neměníte."
+      }
+    ],
+    "note": ""
+  },
+  "credentials": {
+    "name": "Přihlášení webu čerpadla",
+    "page": "/PAGE33.XML",
+    "version": "1642670733",
+    "symbols": [
+      "__T98ACD275_STRING[22]_s",
+      "__TEF2EE650_STRING[16]_s",
+      "__T15C4F08B_STRING[16]_s",
+      "__T3BF5F313_BOOL_i",
+      "__T9F282788_BOOL_i",
+      "__TCAB5CBCF_BOOL_i"
+    ],
+    "fields": [
+      {
+        "key": "username",
+        "label": "Nové jméno (U020)",
+        "indices": [
+          1
+        ],
+        "kind": "form",
+        "max": 16,
+        "secret": true,
+        "blocked_index": 5
+      },
+      {
+        "key": "password",
+        "label": "Nové heslo (U021)",
+        "indices": [
+          2
+        ],
+        "kind": "form",
+        "max": 16,
+        "secret": true,
+        "blocked_index": 5
+      }
+    ],
+    "note": "Nové údaje zadej pouze při úmyslné změně přihlášení čerpadla. Po ověření je HA převezme. Při ztrátě spojení použij obnovení připojení níže. Hesla se nezobrazují ani neukládají do historie HA.",
+    "commit": "__T93D5E536_BOOL_i",
+    "confirm": "Změnit přihlašovací údaje přímo v čerpadle a aktualizovat připojení HA?"
+  },
+  "room1": {
+    "name": "Pokojový terminál 1",
+    "page": "/PAGE39.XML",
+    "version": "1599051509",
+    "symbols": [
+      "__T4383EEA5_BOOL_i",
+      "__TB422310D_STRING[21]_s",
+      "__TFB52C8A7_BOOL_i",
+      "__TCC88C292_BOOL_i",
+      "__TCA9BD024_BOOL_i",
+      "__TA274C1CA_BOOL_i",
+      "__T0C378E7F_BOOL_i",
+      "__TBD21ED06_STRING[11]_s",
+      "__TBBB97F06_STRING[34]_s",
+      "__T112A7EB0_STRING[58]_s",
+      "__TB5C5124F_STRING[32]_s",
+      "__TC5D341BF_BOOL_i",
+      "__TF7627F4F_STRING[36]_s",
+      "__T1839A110_REAL_.1f",
+      "__T9E690E0A_REAL_.1f",
+      "__T97328D27_REAL_.1f",
+      "__TC4305124_USINT_X",
+      "__TE8391824_USINT_X",
+      "__T9C22C324_USINT_X",
+      "__TB02B8A24_USINT_X",
+      "__T4C6690D0_REAL_.1f"
+    ],
+    "fields": [
+      {
+        "key": "RM120",
+        "label": "RM120 · Komfortní teplota při topení",
+        "indices": [
+          15
+        ],
+        "kind": "editor",
+        "visible": 3,
+        "format": "numeric",
+        "editor": "/PAGE373.XML",
+        "command": "__T9D8977BD_SINT_d",
+        "editor_version": "1642510293",
+        "editor_symbols": [
+          "__T210A5A00_STRING[10]_s",
+          "__T156DB747_STRING[100]_s",
+          "__TD32B2D85_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM120:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM100",
+        "label": "RM100 · CIB Adresa",
+        "indices": [
+          19,
+          18,
+          17,
+          16
+        ],
+        "kind": "editor",
+        "visible": 4,
+        "format": "hex",
+        "join": "",
+        "editor": "/PAGE372.XML",
+        "command": "__TADE12FAF_SINT_d",
+        "editor_version": "1642510293",
+        "editor_symbols": [
+          "__T11620212_STRING[16]_s",
+          "__T2505353B_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "title_prefix": "RM100:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat",
+          "20": "A",
+          "21": "B",
+          "22": "C",
+          "23": "D",
+          "24": "E",
+          "25": "F"
+        }
+      },
+      {
+        "key": "RM121",
+        "label": "RM121 · Útlumová teplota při topení",
+        "indices": [
+          14
+        ],
+        "kind": "editor",
+        "visible": 11,
+        "format": "numeric",
+        "editor": "/PAGE374.XML",
+        "command": "__TAF513683_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__T13D21B3E_STRING[10]_s",
+          "__T27B57933_STRING[100]_s",
+          "__TE1F3E3F1_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM121:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM170",
+        "label": "RM170 · Komfortní teplota chlazení",
+        "indices": [
+          13
+        ],
+        "kind": "editor",
+        "visible": 0,
+        "format": "numeric",
+        "editor": "/PAGE375.XML",
+        "command": "__TE56DEB90_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__T59EEC62D_STRING[10]_s",
+          "__T6D89F2C8_STRING[100]_s",
+          "__TABCF680A_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM170:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "actual",
+        "label": "Skutečná pokojová teplota (°C)",
+        "indices": [
+          20
+        ],
+        "kind": "read"
+      }
+    ],
+    "note": "Dostupnost teplot řídí regulátor podle připojeného terminálu a režimu. CIB adresa označuje skutečný připojený hardware."
+  },
+  "room2": {
+    "name": "Pokojový terminál 2",
+    "page": "/PAGE41.XML",
+    "version": "1599051905",
+    "symbols": [
+      "__TC03931D6_STRING[21]_s",
+      "__T35E223A4_BOOL_i",
+      "__T02382991_BOOL_i",
+      "__T042B3B27_BOOL_i",
+      "__T274A2AC9_BOOL_i",
+      "__T8909657C_BOOL_i",
+      "__TBD21ED06_STRING[11]_s",
+      "__TBBB97F06_STRING[34]_s",
+      "__T65314E73_STRING[58]_s",
+      "__T8D3305A6_BOOL_i",
+      "__TB5C5124F_STRING[32]_s",
+      "__T0B63AABC_BOOL_i",
+      "__TF7627F4F_STRING[36]_s",
+      "__T0A8003F1_USINT_X",
+      "__T26894AF1_USINT_X",
+      "__T529291F1_USINT_X",
+      "__T7E9BD8F1_USINT_X",
+      "__T578B15EE_REAL_.1f",
+      "__TD6894A13_REAL_.1f",
+      "__T50D9E509_REAL_.1f",
+      "__T59826624_REAL_.1f"
+    ],
+    "fields": [
+      {
+        "key": "RM220",
+        "label": "RM220 · Komfortní teplota při topení",
+        "indices": [
+          20
+        ],
+        "kind": "editor",
+        "visible": 2,
+        "format": "numeric",
+        "editor": "/PAGE377.XML",
+        "command": "__T218B7269_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__T9D085FD4_STRING[10]_s",
+          "__TA96FC35C_STRING[100]_s",
+          "__T6F29599E_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM220:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM200",
+        "label": "RM200 · CIB Adresa",
+        "indices": [
+          16,
+          15,
+          14,
+          13
+        ],
+        "kind": "editor",
+        "visible": 3,
+        "format": "hex",
+        "join": "",
+        "editor": "/PAGE376.XML",
+        "command": "__T11E32A7B_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__TAD6007C6_STRING[16]_s",
+          "__T99074120_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "title_prefix": "RM200:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat",
+          "20": "A",
+          "21": "B",
+          "22": "C",
+          "23": "D",
+          "24": "E",
+          "25": "F"
+        }
+      },
+      {
+        "key": "RM221",
+        "label": "RM221 · Útlumová teplota při topení",
+        "indices": [
+          19
+        ],
+        "kind": "editor",
+        "visible": 11,
+        "format": "numeric",
+        "editor": "/PAGE378.XML",
+        "command": "__T13533357_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__TAFD01EEA_STRING[10]_s",
+          "__T9BB70D28_STRING[100]_s",
+          "__T5DF197EA_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM221:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM270",
+        "label": "RM270 · Komfortní teplota chlazení",
+        "indices": [
+          18
+        ],
+        "kind": "editor",
+        "visible": 9,
+        "format": "numeric",
+        "editor": "/PAGE379.XML",
+        "command": "__T596FEE44_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__TE5ECC3F9_STRING[10]_s",
+          "__TD18B86D3_STRING[100]_s",
+          "__T17CD1C11_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM270:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "actual",
+        "label": "Skutečná pokojová teplota (°C)",
+        "indices": [
+          17
+        ],
+        "kind": "read"
+      }
+    ],
+    "note": "Dostupnost teplot řídí regulátor podle připojeného terminálu a režimu. CIB adresa označuje skutečný připojený hardware."
+  },
+  "room3": {
+    "name": "Pokojový terminál 3",
+    "page": "/PAGE42.XML",
+    "version": "1599052195",
+    "symbols": [
+      "__TEC30319F_STRING[21]_s",
+      "__T70727AA5_BOOL_i",
+      "__T47A87090_BOOL_i",
+      "__T41BB6226_BOOL_i",
+      "__TA46773C8_BOOL_i",
+      "__T0A243C7D_BOOL_i",
+      "__TBD21ED06_STRING[11]_s",
+      "__TBBB97F06_STRING[34]_s",
+      "__T49385E32_STRING[58]_s",
+      "__TC8A35CA7_BOOL_i",
+      "__TB5C5124F_STRING[32]_s",
+      "__T4EF3F3BD_BOOL_i",
+      "__TF7627F4F_STRING[36]_s",
+      "__T4F10CD85_USINT_X",
+      "__T63198485_USINT_X",
+      "__T17025F85_USINT_X",
+      "__T3B0B1685_USINT_X",
+      "__T5ED096C3_REAL_.1f",
+      "__T93191312_REAL_.1f",
+      "__T1549BC08_REAL_.1f",
+      "__T1C123F25_REAL_.1f"
+    ],
+    "fields": [
+      {
+        "key": "RM320",
+        "label": "RM320 · Komfortní teplota při topení",
+        "indices": [
+          20
+        ],
+        "kind": "editor",
+        "visible": 2,
+        "format": "numeric",
+        "editor": "/PAGE381.XML",
+        "command": "__TB5B27125_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__T09315C98_STRING[10]_s",
+          "__T3D56EF55_STRING[100]_s",
+          "__TFB107597_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM320:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM300",
+        "label": "RM300 · CIB Adresa",
+        "indices": [
+          16,
+          15,
+          14,
+          13
+        ],
+        "kind": "editor",
+        "visible": 3,
+        "format": "hex",
+        "join": "",
+        "editor": "/PAGE380.XML",
+        "command": "__T85DA2937_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__T3959048A_STRING[16]_s",
+          "__T0D3E6D29_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "title_prefix": "RM300:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat",
+          "20": "A",
+          "21": "B",
+          "22": "C",
+          "23": "D",
+          "24": "E",
+          "25": "F"
+        }
+      },
+      {
+        "key": "RM321",
+        "label": "RM321 · Útlumová teplota při topení",
+        "indices": [
+          19
+        ],
+        "kind": "editor",
+        "visible": 11,
+        "format": "numeric",
+        "editor": "/PAGE382.XML",
+        "command": "__T876A301B_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__T3BE91DA6_STRING[10]_s",
+          "__T0F8E2121_STRING[100]_s",
+          "__TC9C8BBE3_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM321:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM370",
+        "label": "RM370 · Komfortní teplota chlazení",
+        "indices": [
+          18
+        ],
+        "kind": "editor",
+        "visible": 9,
+        "format": "numeric",
+        "editor": "/PAGE383.XML",
+        "command": "__TCD56ED08_SINT_d",
+        "editor_version": "1642510294",
+        "editor_symbols": [
+          "__T71D5C0B5_STRING[10]_s",
+          "__T45B2AADA_STRING[100]_s",
+          "__T83F43018_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM370:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "actual",
+        "label": "Skutečná pokojová teplota (°C)",
+        "indices": [
+          17
+        ],
+        "kind": "read"
+      }
+    ],
+    "note": "Dostupnost teplot řídí regulátor podle připojeného terminálu a režimu. CIB adresa označuje skutečný připojený hardware."
+  },
+  "room4": {
+    "name": "Pokojový terminál 4",
+    "page": "/PAGE43.XML",
+    "version": "1599052386",
+    "symbols": [
+      "__T280F3060_STRING[21]_s",
+      "__TA8CBF5EB_BOOL_i",
+      "__T9F11FFDE_BOOL_i",
+      "__T9902ED68_BOOL_i",
+      "__T2D7FFC86_BOOL_i",
+      "__T833CB333_BOOL_i",
+      "__TBD21ED06_STRING[11]_s",
+      "__TBBB97F06_STRING[34]_s",
+      "__T8D072FF5_STRING[58]_s",
+      "__T101AD3E9_BOOL_i",
+      "__TB5C5124F_STRING[32]_s",
+      "__T964A7CF3_BOOL_i",
+      "__TF7627F4F_STRING[36]_s",
+      "__T97A9A65B_USINT_X",
+      "__TBBA0EF5B_USINT_X",
+      "__TCFBB345B_USINT_X",
+      "__TE3B27D5B_USINT_X",
+      "__T60511FDB_REAL_.1f",
+      "__T4BA09C5C_REAL_.1f",
+      "__TCDF03346_REAL_.1f",
+      "__TC4ABB06B_REAL_.1f"
+    ],
+    "fields": [
+      {
+        "key": "RM420",
+        "label": "RM420 · Komfortní teplota při topení",
+        "indices": [
+          20
+        ],
+        "kind": "editor",
+        "visible": 2,
+        "format": "numeric",
+        "editor": "/PAGE385.XML",
+        "command": "__T59C679C1_SINT_d",
+        "editor_version": "1642510295",
+        "editor_symbols": [
+          "__TE545547C_STRING[10]_s",
+          "__TD1222B6A_STRING[100]_s",
+          "__T1764B1A8_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM420:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM400",
+        "label": "RM400 · CIB Adresa",
+        "indices": [
+          16,
+          15,
+          14,
+          13
+        ],
+        "kind": "editor",
+        "visible": 3,
+        "format": "hex",
+        "join": "",
+        "editor": "/PAGE384.XML",
+        "command": "__T69AE21D3_SINT_d",
+        "editor_version": "1642510295",
+        "editor_symbols": [
+          "__TD52D0C6E_STRING[16]_s",
+          "__TE14AA916_STRING[100]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "title_prefix": "RM400:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat",
+          "20": "A",
+          "21": "B",
+          "22": "C",
+          "23": "D",
+          "24": "E",
+          "25": "F"
+        }
+      },
+      {
+        "key": "RM421",
+        "label": "RM421 · Útlumová teplota při topení",
+        "indices": [
+          19
+        ],
+        "kind": "editor",
+        "visible": 11,
+        "format": "numeric",
+        "editor": "/PAGE386.XML",
+        "command": "__T6B1E38FF_SINT_d",
+        "editor_version": "1642510295",
+        "editor_symbols": [
+          "__TD79D1542_STRING[10]_s",
+          "__TE3FAE51E_STRING[100]_s",
+          "__T25BC7FDC_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM421:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "RM470",
+        "label": "RM470 · Komfortní teplota chlazení",
+        "indices": [
+          18
+        ],
+        "kind": "editor",
+        "visible": 9,
+        "format": "numeric",
+        "editor": "/PAGE387.XML",
+        "command": "__T2122E5EC_SINT_d",
+        "editor_version": "1642510295",
+        "editor_symbols": [
+          "__T9DA1C851_STRING[10]_s",
+          "__TA9C66EE5_STRING[100]_s",
+          "__T6F80F427_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "RM470:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "actual",
+        "label": "Skutečná pokojová teplota (°C)",
+        "indices": [
+          17
+        ],
+        "kind": "read"
+      }
+    ],
+    "note": "Dostupnost teplot řídí regulátor podle připojeného terminálu a režimu. CIB adresa označuje skutečný připojený hardware."
+  },
+  "faults": {
+    "name": "Signalizace poruchy a aktivace",
+    "page": "/PAGE72.XML",
+    "version": "1599060896",
+    "symbols": [
+      "__T9725B613_BOOL_i",
+      "__T9FFB5AD6_STRING[41]_s",
+      "__T7B842CD3_STRING[7]_s",
+      "__TD1E857CE_STRING[10]_s",
+      "__T520A5A32_BOOL_i",
+      "__T277ECD2F_STRING[52]_s",
+      "__TE5F97E29_STRING[10]_s",
+      "__T07DB0A68_BOOL_i",
+      "__T4A49946E_STRING[21]_s",
+      "__T6D9945DD_STRING[8]_s",
+      "__TCD408C38_BOOL_i",
+      "__T683CDC03_STRING[19]_s",
+      "__T4E6D0F15_BOOL_i",
+      "__T6B70DC4A_STRING[52]_s",
+      "__T918924EB_STRING[10]_s",
+      "__T242F40A0_TIME_Thh:mm:ss"
+    ],
+    "fields": [
+      {
+        "key": "F115",
+        "label": "F115 · Aktivační PIN kód",
+        "indices": [
+          9
+        ],
+        "kind": "editor",
+        "visible": 7,
+        "secret": true,
+        "editor": "/PAGE338.XML",
+        "command": "__TE6C769E1_SINT_d",
+        "editor_version": "1642510289",
+        "editor_symbols": [
+          "__T7D59445C_STRING[10]_s",
+          "__T21316169_STRING[100]_s",
+          "__T57E9FBAB_STRING[10]_s"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "title_prefix": "F115:",
+        "key_labels": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "10": "−",
+          "11": ".",
+          "12": "Smazat znak",
+          "13": "Vymazat"
+        }
+      },
+      {
+        "key": "F100",
+        "label": "F100 · Signalizace poruchy",
+        "indices": [
+          14
+        ],
+        "kind": "cycle",
+        "command": "__T0A1A0067_SINT_d",
+        "visible": 10
+      },
+      {
+        "key": "F101",
+        "label": "F101 · Čas pro automatické ukončení signalizace poruchy",
+        "indices": [
+          15
+        ],
+        "kind": "editor",
+        "visible": 12,
+        "secret": false,
+        "editor": "/PAGE337.XML",
+        "command": "__T122E4159_SINT_d",
+        "editor_version": "1642510289",
+        "editor_symbols": [
+          "__T4AECD66D_INT_d",
+          "__TD5D8195C_STRING[100]_s",
+          "__T9E54BA49_INT_d",
+          "__T6556D2D8_INT_d"
+        ],
+        "keys": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          14
+        ],
+        "title_prefix": "F101:",
+        "editor_labels": [
+          "Hodiny",
+          "Název",
+          "Minuty",
+          "Sekundy"
+        ],
+        "key_labels": {
+          "0": "Hodiny +",
+          "1": "Hodiny −",
+          "2": "Minuty +",
+          "3": "Minuty −",
+          "4": "Sekundy +",
+          "5": "Sekundy −"
+        }
+      }
+    ],
+    "note": "Tyto položky se zpřístupní pouze tehdy, když je nabídne regulátor. Skrytá nastavení se neposílají."
+  }
+}

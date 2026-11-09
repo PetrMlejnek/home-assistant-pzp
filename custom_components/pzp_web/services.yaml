@@ -1,0 +1,68 @@
+schedule:
+  name: Časový program PZP
+  description: Načte program nebo celý den a uloží ověřené čtvrthodinové intervaly.
+  fields:
+    config_entry_id:
+      name: Integrace čerpadla
+      required: true
+      selector:
+        config_entry:
+          integration: pzp_web
+    program:
+      name: Program
+      required: true
+      selector:
+        select:
+          options: [R046, M146, O039, C003]
+    action:
+      name: Akce
+      default: view
+      selector:
+        select:
+          options: [view, previous_day, next_day, previous_time, next_time, set, day_view, day_set]
+    day:
+      name: Zobrazený den
+      selector:
+        text:
+    start:
+      name: Začátek zobrazení
+      selector:
+        text:
+    slot:
+      name: Interval 0–11
+      selector:
+        number:
+          min: 0
+          max: 11
+    value:
+      name: Zapnuto
+      selector:
+        boolean:
+    expected_slots:
+      name: Původní stav dvanácti intervalů
+      selector:
+        object:
+    day_slots:
+      name: Nový stav 96 intervalů dne
+      selector:
+        object:
+    expected_day_slots:
+      name: Původní stav 96 intervalů dne
+      selector:
+        object:
+history:
+  name: Historie událostí PZP
+  description: Prohlížení událostí a teplot uložených v regulátoru.
+  fields:
+    config_entry_id:
+      name: Integrace čerpadla
+      required: true
+      selector:
+        config_entry:
+          integration: pzp_web
+    action:
+      name: Akce
+      default: view
+      selector:
+        select:
+          options: [view, newest, older, newer]

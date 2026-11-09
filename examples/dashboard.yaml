@@ -1,0 +1,29 @@
+title: PZP
+views:
+  - title: Ovládání
+    path: ovladani
+    icon: mdi:heat-pump
+    cards:
+      - type: entities
+        title: Období
+        entities:
+          - select.pzp_volba_sezony
+      - type: markdown
+        content: >-
+          Další parametry najdete na zařízení PZP v Nastavení → Zařízení a služby.
+          Tento panel nevyžaduje volitelné Modbus soubory.
+  - title: Programy
+    path: programy
+    cards:
+      - type: custom:pzp-schedule-card
+        entity: select.pzp_volba_sezony
+  - title: Historie
+    path: historie
+    cards:
+      - type: custom:pzp-history-card
+        entity: select.pzp_volba_sezony
+  - title: Nastavení
+    path: nastaveni
+    cards:
+      - type: custom:pzp-admin-card
+        entity: select.pzp_volba_sezony

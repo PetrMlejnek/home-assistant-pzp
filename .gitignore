@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+config/
+*.log
+.env
+secrets.yaml
+.storage/
+backups/
+*.tar
+*.zip

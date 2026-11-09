@@ -1,0 +1,960 @@
+- switch:
+  - name: PZP tepelne cerpadlo
+    unique_id: pzp_heatpump_enable
+    icon: mdi:heat-pump
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and states(''switch.pzp_pohotovost'')
+      in [''on'',''off''] }}'
+    state: '{{ is_state(''switch.pzp_pohotovost'', ''off'') }}'
+    turn_on:
+      action: switch.turn_off
+      target:
+        entity_id: switch.pzp_pohotovost
+    turn_off:
+      action: switch.turn_on
+      target:
+        entity_id: switch.pzp_pohotovost
+- sensor:
+  - name: PZP Okolí výparníku
+    unique_id: pzp_ext_okoli_vyparniku
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[2]|float * 0.1)|round(1)) if v|length>2
+      and is_number(v[2]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_2'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Povrch výparníku
+    unique_id: pzp_ext_povrch_vyparniku
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[3]|float * 0.1)|round(1)) if v|length>3
+      and is_number(v[3]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_3'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Vratná voda topení
+    unique_id: pzp_ext_vratna_voda_topeni
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[4]|float * 0.1)|round(1)) if v|length>4
+      and is_number(v[4]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_4'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Voda za směšovačem 1
+    unique_id: pzp_ext_voda_za_smesovacem_1
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[6]|float * 0.1)|round(1)) if v|length>6
+      and is_number(v[6]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_6'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Voda za směšovačem 2
+    unique_id: pzp_ext_voda_za_smesovacem_2
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[7]|float * 0.1)|round(1)) if v|length>7
+      and is_number(v[7]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_7'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Venkovní teplota
+    unique_id: pzp_ext_venkovni_teplota
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[8]|float * 0.1)|round(1)) if v|length>8
+      and is_number(v[8]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_8'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Pokojová teplota 2
+    unique_id: pzp_ext_pokojova_teplota_2
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[10]|float * 0.1)|round(1)) if v|length>10
+      and is_number(v[10]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_10'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Pokojová teplota 3
+    unique_id: pzp_ext_pokojova_teplota_3
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[11]|float * 0.1)|round(1)) if v|length>11
+      and is_number(v[11]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_11'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Pokojová teplota 4
+    unique_id: pzp_ext_pokojova_teplota_4
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[12]|float * 0.1)|round(1)) if v|length>12
+      and is_number(v[12]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_12'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Vstup výparníku
+    unique_id: pzp_ext_vstup_vyparniku
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[13]|float * 0.1)|round(1)) if v|length>13
+      and is_number(v[13]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_13'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Výstup výparníku
+    unique_id: pzp_ext_vystup_vyparniku
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[14]|float * 0.1)|round(1)) if v|length>14
+      and is_number(v[14]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_14'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Teplota bazénu
+    unique_id: pzp_ext_teplota_bazenu
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[15]|float * 0.1)|round(1)) if v|length>15
+      and is_number(v[15]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_15'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Vratná voda chlazení
+    unique_id: pzp_ext_vratna_voda_chlazeni
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[16]|float * 0.1)|round(1)) if v|length>16
+      and is_number(v[16]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_16'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Topná voda do soustavy
+    unique_id: pzp_ext_topna_voda_do_soustavy
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[17]|float * 0.1)|round(1)) if v|length>17
+      and is_number(v[17]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_17'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP TUV informační čidlo
+    unique_id: pzp_ext_tuv_informacni_cidlo
+    state: '{% set v=states(''sensor.pzp_teploty_raw'').split('','') %}{{ ((v[18]|float * 0.1)|round(1)) if v|length>18
+      and is_number(v[18]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_teploty_raw'') and states(''sensor.pzp_teploty_raw'').split('','')|length
+      == 19 and is_state(''binary_sensor.pzp_bit_160_20'',''on'') }}'
+    unit_of_measurement: °C
+    device_class: temperature
+    state_class: measurement
+  - name: PZP Průměrná venkovní teplota pro sezónu
+    unique_id: pzp_ext_prumerna_venkovni_teplota_pro_sezonu
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[0]|float * 0.1)|round(1)) if v|length>0
+      and is_number(v[0]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Průměrná venkovní teplota pro regulaci
+    unique_id: pzp_ext_prumerna_venkovni_teplota_pro_regulaci
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[1]|float * 0.1)|round(1)) if v|length>1
+      and is_number(v[1]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Dostupný příkon kompresoru
+    unique_id: pzp_ext_dostupny_prikon_kompresoru
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[2]|float * 0.1)|round(1)) if v|length>2
+      and is_number(v[2]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+  - name: PZP Maximální příkon čerpadla
+    unique_id: pzp_ext_maximalni_prikon_cerpadla
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[3]|float * 0.01)|round(2)) if v|length>3
+      and is_number(v[3]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+  - name: PZP Sezóna
+    unique_id: pzp_ext_sezona
+    state: '{% set x=states(''sensor.pzp_regulace_raw'').split('','') %}{% if x|length==23 %}{% set v=x[4]|int %}{{
+      {0:''Topná sezóna'',1:''Léto''}.get(v,''Neznámá (''~v~'')'') }}{% else %}{{ none }}{% endif %}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+  - name: PZP Směšovač 1 cíl topení
+    unique_id: pzp_ext_smesovac_1_cil_topeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[5]|float * 0.1)|round(1)) if v|length>5
+      and is_number(v[5]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Směšovač 2 cíl topení
+    unique_id: pzp_ext_smesovac_2_cil_topeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[6]|float * 0.1)|round(1)) if v|length>6
+      and is_number(v[6]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 and is_state(''binary_sensor.pzp_bit_560_2'',''on'') }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Aktuální cíl TUV
+    unique_id: pzp_ext_aktualni_cil_tuv
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[7]|float * 0.1)|round(1)) if v|length>7
+      and is_number(v[7]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Hystereze TUV
+    unique_id: pzp_ext_hystereze_tuv
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[8]|float * 0.1)|round(1)) if v|length>8
+      and is_number(v[8]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+  - name: PZP Průběh sušení podlahy
+    unique_id: pzp_ext_prubeh_suseni_podlahy
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[9]|float * 0.001)|round(3)) if v|length>9
+      and is_number(v[9]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: '%'
+    state_class: measurement
+  - name: PZP Teplota sušení podlahy
+    unique_id: pzp_ext_teplota_suseni_podlahy
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[10]|float * 0.1)|round(1)) if v|length>10
+      and is_number(v[10]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Regulační bod topení
+    unique_id: pzp_ext_regulacni_bod_topeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[11]|float * 0.1)|round(1)) if v|length>11
+      and is_number(v[11]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Hystereze topení
+    unique_id: pzp_ext_hystereze_topeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[12]|float * 0.1)|round(1)) if v|length>12
+      and is_number(v[12]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+  - name: PZP Cíl předehřevu TUV
+    unique_id: pzp_ext_cil_predehrevu_tuv
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[13]|float * 0.1)|round(1)) if v|length>13
+      and is_number(v[13]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Aktuální cíl vytápění
+    unique_id: pzp_ext_aktualni_cil_vytapeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[14]|float * 0.1)|round(1)) if v|length>14
+      and is_number(v[14]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Vratná voda pro regulaci
+    unique_id: pzp_ext_vratna_voda_pro_regulaci
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[15]|float * 0.1)|round(1)) if v|length>15
+      and is_number(v[15]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Směšovač 1 cíl chlazení
+    unique_id: pzp_ext_smesovac_1_cil_chlazeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[16]|float * 0.1)|round(1)) if v|length>16
+      and is_number(v[16]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Směšovač 2 cíl chlazení
+    unique_id: pzp_ext_smesovac_2_cil_chlazeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[17]|float * 0.1)|round(1)) if v|length>17
+      and is_number(v[17]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 and is_state(''binary_sensor.pzp_bit_560_2'',''on'') }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Aktuální cíl chlazení
+    unique_id: pzp_ext_aktualni_cil_chlazeni
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[18]|float * 0.1)|round(1)) if v|length>18
+      and is_number(v[18]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+    unit_of_measurement: °C
+    state_class: measurement
+    device_class: temperature
+  - name: PZP Bivalence topení kód
+    unique_id: pzp_ext_bivalence_topeni_kod
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[19]|float * 1)|round(1)) if v|length>19
+      and is_number(v[19]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+  - name: PZP Bivalence TUV kód
+    unique_id: pzp_ext_bivalence_tuv_kod
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[20]|float * 1)|round(1)) if v|length>20
+      and is_number(v[20]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+  - name: PZP Počet topných okruhů
+    unique_id: pzp_ext_pocet_topnych_okruhu
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[21]|float * 1)|round(1)) if v|length>21
+      and is_number(v[21]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+  - name: PZP Počet směšovačů
+    unique_id: pzp_ext_pocet_smesovacu
+    state: '{% set v=states(''sensor.pzp_regulace_raw'').split('','') %}{{ ((v[22]|float * 1)|round(1)) if v|length>22
+      and is_number(v[22]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_regulace_raw'') and states(''sensor.pzp_regulace_raw'').split('','')|length
+      == 23 }}'
+  - name: PZP Verze protokolu
+    unique_id: pzp_ext_verze_protokolu
+    state: '{% set v=states(''sensor.pzp_verze_protokolu_raw'')|int %}{{ ''%02d.%02d''|format(v//256,v%256) }}'
+    availability: '{{ has_value(''sensor.pzp_verze_protokolu_raw'') }}'
+  - name: PZP Verze softwaru
+    unique_id: pzp_ext_verze_softwaru
+    state: '{% set v=states(''sensor.pzp_identifikace_raw'').split('','') %}{{ (''%02d.%02d.%02d''|format(v[2]|int,v[3]|int,v[4]|int))
+      if v|length==12 else none }}'
+    availability: '{{ has_value(''sensor.pzp_identifikace_raw'') and states(''sensor.pzp_identifikace_raw'').split('','')|length
+      == 12 }}'
+  - name: PZP Výrobní číslo
+    unique_id: pzp_ext_vyrobni_cislo
+    state: '{% set v=states(''sensor.pzp_identifikace_raw'').split('','') %}{% if v|length==12 %}{% set ns=namespace(s='''')
+      %}{% for i in range(8,12) %}{% set n=v[i]|int %}{% set ns.s=ns.s~(''%c%c''|format(n//256,n%256)) %}{% endfor
+      %}{{ ns.s|trim }}{% else %}{{ none }}{% endif %}'
+    availability: '{{ has_value(''sensor.pzp_identifikace_raw'') and states(''sensor.pzp_identifikace_raw'').split('','')|length
+      == 12 }}'
+  - name: PZP Křivka topení
+    unique_id: pzp_ext_krivka_topeni
+    state: '{% set v=states(''sensor.pzp_krivky_raw'').split('','') %}{{ ((v[0]|float * 1)|round(0)) if v|length>0
+      and is_number(v[0]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_krivky_raw'') and states(''sensor.pzp_krivky_raw'').split('','')|length
+      == 3 }}'
+  - name: PZP Křivka směšování 1
+    unique_id: pzp_ext_krivka_smesovani_1
+    state: '{% set v=states(''sensor.pzp_krivky_raw'').split('','') %}{{ ((v[1]|float * 1)|round(0)) if v|length>1
+      and is_number(v[1]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_krivky_raw'') and states(''sensor.pzp_krivky_raw'').split('','')|length
+      == 3 }}'
+  - name: PZP Křivka směšování 2
+    unique_id: pzp_ext_krivka_smesovani_2
+    state: '{% set v=states(''sensor.pzp_krivky_raw'').split('','') %}{{ ((v[2]|float * 1)|round(0)) if v|length>2
+      and is_number(v[2]) else none }}'
+    availability: '{{ has_value(''sensor.pzp_krivky_raw'') and states(''sensor.pzp_krivky_raw'').split('','')|length
+      == 3 }}'
+  - name: PZP Poslední změna hodin regulátoru
+    unique_id: pzp_ext_posledni_zmena_hodin_regulatoru
+    state: '{{ states.sensor.pzp_hodiny_raw.last_changed.isoformat() }}'
+    availability: '{{ has_value(''sensor.pzp_hodiny_raw'') }}'
+    device_class: timestamp
+  - name: PZP Rozdíl výstupní a vstupní vody
+    unique_id: pzp_ext_rozdil_vystupni_a_vstupni_vody
+    state: '{{ (states(''sensor.pzp_vystupni_voda'')|float-states(''sensor.pzp_vstupni_voda'')|float)|round(1) }}'
+    availability: '{{ has_value(''sensor.pzp_vystupni_voda'') and has_value(''sensor.pzp_vstupni_voda'') and is_state(''binary_sensor.pzp_zive_spojeni'',''on'')
+      }}'
+    unit_of_measurement: °C
+    state_class: measurement
+  - name: PZP Počet aktivních poruch
+    unique_id: pzp_ext_pocet_aktivnich_poruch
+    state: '{{ expand([''binary_sensor.pzp_bit_200'', ''binary_sensor.pzp_bit_200_1'', ''binary_sensor.pzp_bit_200_2'',
+      ''binary_sensor.pzp_bit_200_3'', ''binary_sensor.pzp_bit_200_4'', ''binary_sensor.pzp_bit_200_5'', ''binary_sensor.pzp_bit_200_6'',
+      ''binary_sensor.pzp_bit_200_7'', ''binary_sensor.pzp_bit_200_8'', ''binary_sensor.pzp_bit_200_9'', ''binary_sensor.pzp_bit_200_10'',
+      ''binary_sensor.pzp_bit_200_11'', ''binary_sensor.pzp_bit_200_12'', ''binary_sensor.pzp_bit_200_13'', ''binary_sensor.pzp_bit_200_14'',
+      ''binary_sensor.pzp_bit_200_15'', ''binary_sensor.pzp_bit_200_16'', ''binary_sensor.pzp_bit_200_17'', ''binary_sensor.pzp_bit_200_18'',
+      ''binary_sensor.pzp_bit_200_19'', ''binary_sensor.pzp_bit_200_20'', ''binary_sensor.pzp_bit_200_21'', ''binary_sensor.pzp_bit_200_22'',
+      ''binary_sensor.pzp_bit_200_23'', ''binary_sensor.pzp_bit_200_24'', ''binary_sensor.pzp_bit_200_25'', ''binary_sensor.pzp_bit_200_26'',
+      ''binary_sensor.pzp_bit_200_27'', ''binary_sensor.pzp_bit_200_28'', ''binary_sensor.pzp_bit_200_29'', ''binary_sensor.pzp_bit_200_30'',
+      ''binary_sensor.pzp_bit_200_31'', ''binary_sensor.pzp_bit_233'', ''binary_sensor.pzp_bit_233_1'', ''binary_sensor.pzp_bit_233_2'',
+      ''binary_sensor.pzp_bit_233_3'', ''binary_sensor.pzp_bit_233_4'', ''binary_sensor.pzp_bit_233_5''])|selectattr(''state'',''eq'',''on'')|list|count
+      }}'
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_200'')
+      and has_value(''binary_sensor.pzp_bit_233'') }}'
+  - name: PZP Provozní stav
+    unique_id: pzp_ext_provozni_stav
+    state: '{% if is_state(''binary_sensor.pzp_bit_1000_7'',''on'') %}Porucha{% elif is_state(''binary_sensor.pzp_pohotovostni_rezim'',''on'')
+      %}Pohotovost{% elif is_state(''binary_sensor.pzp_bit_350_5'',''on'') %}Odtávání{% elif is_state(''binary_sensor.pzp_bit_630_4'',''on'')
+      %}Ohřev TUV{% elif is_state(''binary_sensor.pzp_bit_700_1'',''on'') %}Vytápění{% elif is_state(''binary_sensor.pzp_bit_100_7'',''on'')
+      %}Chlazení{% elif is_state(''binary_sensor.pzp_bit_1000'',''on'') %}Blokováno HDO{% else %}Připraveno / bez
+      požadavku{% endif %}'
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_700_1'')
+      }}'
+- binary_sensor:
+  - name: PZP živé spojení
+    unique_id: pzp_ext_live_connection
+    device_class: connectivity
+    state: '{{ has_value(''sensor.pzp_hodiny_raw'') and (now()-states.sensor.pzp_hodiny_raw.last_changed).total_seconds()<180
+      }}'
+- switch:
+  - name: PZP Ruční blokace kompresoru
+    unique_id: pzp_user_coil_2000
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2000
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2000
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Ruční blokace elektrokotle
+    unique_id: pzp_user_coil_2001
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_1'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_1'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_1'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2001
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_1'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2001
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Povolit doplňkový zdroj tepla
+    unique_id: pzp_user_coil_2002
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_2'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_2'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_2'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2002
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_2'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2002
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Signalizace poruchy
+    unique_id: pzp_user_coil_2005
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_5'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_5'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_5'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2005
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_5'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2005
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Ruční regulační bod směšovače 1
+    unique_id: pzp_user_coil_2006
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_6'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_6'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_6'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2006
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_6'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2006
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Příprava TUV
+    unique_id: pzp_user_coil_2008
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_8'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_8'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_8'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2008
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_8'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2008
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Ruční regulační bod topení
+    unique_id: pzp_user_coil_2009
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_9'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_9'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_9'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2009
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_9'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2009
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Předehřev TUV
+    unique_id: pzp_user_coil_2010
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_10'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_10'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_10'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2010
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_10'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2010
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Funkce termostatu pokojového terminálu
+    unique_id: pzp_user_coil_2011
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_11'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_11'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_11'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2011
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_11'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2011
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Párty režim
+    unique_id: pzp_user_coil_2012
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_12'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_12'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_12'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2012
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_12'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2012
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Dětský zámek pokojového terminálu
+    unique_id: pzp_user_coil_2013
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_13'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2000_13'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_13'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2013
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2000_13'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2013
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2000
+  - name: PZP Ruční blokace externího zdroje
+    unique_id: pzp_user_coil_2029
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2029'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2029
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2029
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+  - name: PZP Vytápění v létě
+    unique_id: pzp_user_coil_2030
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_1'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2029_1'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_1'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2030
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_1'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2030
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+  - name: PZP Ohřev bazénu
+    unique_id: pzp_user_coil_2031
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_2'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2029_2'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_2'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2031
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_2'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2031
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+  - name: PZP Chlazení v topné sezóně
+    unique_id: pzp_user_coil_2032
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_3'')
+      }}'
+    state: '{{ is_state(''binary_sensor.pzp_bit_2029_3'',''on'') }}'
+    turn_on:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_3'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2032
+        state: true
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+    turn_off:
+    - condition: template
+      value_template: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') and has_value(''binary_sensor.pzp_bit_2029_3'')
+        }}'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2032
+        state: false
+    - delay:
+        seconds: 1
+    - action: homeassistant.update_entity
+      target:
+        entity_id: binary_sensor.pzp_bit_2029
+- button:
+  - name: PZP Reset poruchy
+    unique_id: pzp_user_reset_fault
+    icon: mdi:alert-circle-check
+    availability: '{{ is_state(''binary_sensor.pzp_zive_spojeni'',''on'') }}'
+    press:
+    - condition: state
+      entity_id: binary_sensor.pzp_zive_spojeni
+      state: 'on'
+    - action: modbus.write_coil
+      data:
+        hub: pzp_hp
+        slave: 1
+        address: 2003
+        state: true
+    - delay:
+        seconds: 2
+    - action: homeassistant.update_entity
+      target:
+        entity_id:
+        - binary_sensor.pzp_bit_200
+        - binary_sensor.pzp_bit_233
+        - binary_sensor.pzp_bit_1000

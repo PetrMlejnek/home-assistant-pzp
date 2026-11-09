@@ -1,0 +1,32 @@
+{
+  "title": "PZP Heat Pump",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Připojit čerpadlo PZP",
+        "description": "Zadejte stejné přihlášení jako do webu čerpadla. Údaje se uloží pouze v Home Assistantu. Připojení samo nemění nastavení čerpadla.",
+        "data": {
+          "host": "Místní IPv4 adresa nebo DNS jméno (volitelně :port)",
+          "username": "Uživatelské jméno",
+          "password": "Heslo"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Obnovit přihlášení k PZP",
+        "data": {
+          "username": "Uživatelské jméno",
+          "password": "Heslo"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Čerpadlo odmítlo přihlašovací údaje.",
+      "cannot_connect": "Spojení s čerpadlem se nepodařilo.",
+      "unsupported_firmware": "Web čerpadla neodpovídá ověřené verzi. Nastavení nebylo změněno."
+    },
+    "abort": {
+      "already_configured": "Toto čerpadlo už je připojeno.",
+      "reauth_successful": "Přihlášení bylo obnoveno."
+    }
+  }
+}
